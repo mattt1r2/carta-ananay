@@ -11,7 +11,10 @@
   --cream: #fff9f5;
   --muted: #70647c;
   --line: #ebdfef;
-  --dock-height: 74px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
   --page-width: 1160px;
 }
 * { box-sizing: border-box; }
@@ -27,19 +30,20 @@ h1, h2, h3, p { margin: 0; }
 h1, h2, h3 { line-height: 1.18; }
 a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid #0080ac; outline-offset: 4px; }
 [hidden] { display: none !important; }
-.icon { width: 24px; height: 24px; flex-shrink: 0; }
+.icon { display: block; width: 24px; height: 24px; flex-shrink: 0; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .skip-link { position: fixed; top: -100px; left: 16px; z-index: 100; padding: 12px 20px; background: white; border-radius: 12px; }
 .skip-link:focus { top: 12px; }
 .eyebrow { font-size: 10px; letter-spacing: .15em; font-weight: 800; color: var(--pink); }
-.app-scroll { height: calc(100dvh - var(--dock-height) - env(safe-area-inset-bottom, 0px)); overflow-y: auto; overflow-x: clip; scroll-behavior: smooth; scroll-padding-top: 86px; }
+.app-scroll { height: 100vh; height: 100dvh; padding: var(--safe-top) var(--safe-right) var(--safe-bottom) var(--safe-left); overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; scroll-padding-top: calc(86px + var(--safe-top)); scroll-padding-bottom: calc(86px + var(--safe-bottom)); }
 section, header, main, .families, .catalog-family, footer { scroll-margin-top: 8px; }
 
 /* 2. Portada compacta, con adornos hechos en CSS. */
 .cover { position: relative; max-width: var(--page-width); margin: 0 auto; padding: 18px 28px 20px; background: radial-gradient(ellipse at 6% 80%, #ccf8ff 0, transparent 52%), radial-gradient(ellipse at 90% 5%, #ffdaf0 0, transparent 52%), #fffdfb; border-radius: 0 0 30px 30px; overflow: hidden; }
 .cover::after { content: ''; position: absolute; width: 120px; height: 190px; right: -86px; bottom: -85px; border-radius: 60%; transform: rotate(40deg); background: var(--cyan); opacity: .45; }
 .topline { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 10px; letter-spacing: .11em; font-weight: 800; color: var(--deep); }
-.topline a { min-height: 30px; display: inline-flex; align-items: center; }
+.topline a { min-height: 30px; display: inline-flex; align-items: center; gap: 5px; }
+.topline a>.icon { width: 12px; height: 12px; }
 .cover-inner { display: flex; align-items: center; justify-content: center; gap: 32px; position: relative; }
 .brand-logo { width: 180px; height: 168px; object-fit: contain; filter: drop-shadow(0 8px 8px #5b22a819); }
 h1 { font-family: 'Lobster', Georgia, serif; color: var(--pink); font-size: 66px; font-weight: 400; }
@@ -48,14 +52,15 @@ h1 span { display: block; font: 900 24px/1 'Nunito Sans', Arial, sans-serif; col
 .cover-spark { color: var(--fuchsia); font-size: 36px; transform: rotate(15deg); margin-left: 24px; }
 
 /* 3. Buscador sticky y panel de navegación por familias. */
-.browse-bar { position: sticky; top: 0; z-index: 30; background: #fff9f5; border-bottom: 1px solid #ebdfef80; }
+.browse-bar { position: sticky; top: var(--safe-top); z-index: 30; background: #fff9f5; border-bottom: 1px solid #ebdfef80; }
 .browse-inner { max-width: var(--page-width); margin: auto; padding: 14px 24px; display: flex; gap: 10px; align-items: center; position: relative; }
 .search-box { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; border: 1px solid #d9cbea; border-radius: 16px; background: white; padding: 0 14px; height: 48px; box-shadow: 0 3px 14px #34136e05; color: var(--purple); }
 .search-box:focus-within { border-color: var(--purple); box-shadow: 0 0 0 3px #5b22a811; }
 .search-box input { width: 100%; border: 0; outline: none; background: transparent; color: var(--ink); font-size: 16px; height: 44px; }
 .search-box input::placeholder { color: #82748e; opacity: 1; }
 .search-box input::-webkit-search-cancel-button { display: none; }
-.search-clear { flex-shrink: 0; border: 0; background: none; font-size: 25px; width: 44px; height: 44px; }
+.search-clear { display: grid; place-items: center; flex-shrink: 0; border: 0; background: none; width: 44px; height: 44px; padding: 0; }
+.search-clear>.icon { width: 20px; height: 20px; }
 .category-menu summary { list-style: none; min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 8px; color: white; background: var(--purple); border-radius: 15px; padding: 0 16px; font-weight: 800; font-size: 14px; }
 summary::-webkit-details-marker { display: none; }
 .category-menu[open] summary { background: var(--deep); }
@@ -109,8 +114,9 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
 .category-title { display: flex; align-items: baseline; flex-wrap: wrap; gap: 3px 12px; min-width: 0; }
 .section-name { font-size: 17px; font-weight: 900; overflow-wrap: anywhere; }
 .category-count { font-size: 12px; color: var(--muted); white-space: nowrap; }
-.expand-icon { width: 28px; height: 28px; display: grid; place-items: center; flex-shrink: 0; border-radius: 50%; color: var(--purple); background: #f1e9fa; font-size: 20px; line-height: 1; transition: transform .2s; }
-.category-section[open] .expand-icon { transform: rotate(180deg); }
+.expand-icon { width: 28px; height: 28px; display: grid; place-items: center; flex-shrink: 0; border-radius: 50%; color: var(--purple); background: #f1e9fa; }
+.expand-icon>.icon { width: 18px; height: 18px; transform-origin: center; transition: transform .2s; }
+.category-section[open] .expand-icon>.icon { transform: rotate(180deg); }
 .category-section[open]>.section-heading { color: var(--purple); }
 .section-content { padding: 0 16px 16px; }
 .catalog-subheading { font-size: 18px; color: var(--deep); margin: 23px 0 14px; }
@@ -147,6 +153,7 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
 .search-status { color: var(--purple); background: #f0e8fa; font-size: 15px; padding: 12px 16px; border-radius: 14px; margin: 14px 0; }
 .search-empty { padding: 40px 20px; text-align: center; background: white; border-radius: 20px; border: 1px solid var(--line); }
 .search-empty>span { font-size: 45px; color: var(--pink); }
+.search-empty>span>.icon { width: 42px; height: 42px; margin: auto; }
 .search-empty h3 { font-size: 22px; margin: 10px 0; }
 .search-empty p { color: var(--muted); }
 .is-searching .cover, .is-searching .quick-nav, .is-searching .families, .is-searching .menu-intro, .is-searching .subcategory-nav { display: none; }
@@ -159,10 +166,12 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
 .footer-welcome h2 { font-size: 35px; letter-spacing: -.04em; margin: 12px 0; }
 .footer-welcome>p:not(.eyebrow) { font-size: 21px; color: #e1cfe9; }
 .footer-back { display: inline-flex; align-items: center; gap: 25px; margin-top: 24px; padding: 10px 18px; min-height: 44px; border: 1px solid #8969a1; border-radius: 24px; font-size: 14px; }
+.footer-back .icon { width: 18px; height: 18px; }
 .footer-contact address { font-style: normal; display: flex; flex-direction: column; align-items: flex-start; }
 .footer-contact address>span, .opening-hours>span { display: block; font-size: 10px; font-weight: 800; letter-spacing: .13em; color: #c9afd9; margin: 12px 0 2px; }
 .footer-contact address>a { font-size: 15px; display: flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; max-width: 100%; }
 .footer-contact address>a:hover { text-decoration: underline; }
+.footer-contact address>a>.icon { width: 15px; height: 15px; margin-left: 7px; }
 .opening-hours { font-size: 15px; }
 .footer-whatsapp { display: flex; align-items: center; gap: 12px; border: 1px solid #69c7ad66; background: #a2efd70d; border-radius: 15px; padding: 10px 14px; margin-top: 20px; max-width: 350px; }
 .footer-whatsapp>span { flex: 1; font-size: 14px; }
@@ -183,14 +192,14 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
 .footer-bottom .signature-brand strong { font-size: 16px; }
 .footer-bottom .signature-brand img { width: 45px; height: 40px; }
 
-/* 8. Franja inferior reservada: flotación suave sin cubrir fotos ni precios. */
-.utility-dock { position: fixed; bottom: 0; left: 0; right: 0; height: calc(var(--dock-height) + env(safe-area-inset-bottom,0px)); padding: 10px max(24px,calc((100% - 1112px)/2)) calc(10px + env(safe-area-inset-bottom,0px)); display: flex; align-items: center; justify-content: space-between; gap: 14px; background: #fffcfaf2; backdrop-filter: blur(14px); border-top: 1px solid var(--line); z-index: 40; }
-.servimat-floating { opacity: .78; min-height: 44px; justify-content: center; transition: opacity .3s, transform .3s, visibility .3s; }
+/* 8. Flotantes independientes; safe areas sin reservar una barra inferior. */
+.servimat-floating { position: fixed; z-index: 40; left: 16px; left: calc(16px + var(--safe-left)); bottom: 16px; bottom: calc(16px + var(--safe-bottom)); width: max-content; max-width: calc(100vw - 106px - var(--safe-left) - var(--safe-right)); padding: 8px 10px; border-radius: 14px; background: rgba(255,252,250,.9); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); box-shadow: 0 3px 15px #281c3d0d; opacity: .78; min-height: 44px; justify-content: center; transition: opacity .3s, transform .3s, visibility .3s; }
 .servimat-floating .signature-brand { animation: soft-float 5s ease-in-out infinite; }
 .servimat-floating:hover { opacity: 1; }
 .servimat-floating.is-hidden { opacity: 0; pointer-events: none; transform: translateY(10px); visibility: hidden; }
-.whatsapp-float { display: flex; align-items: center; justify-content: center; gap: 8px; height: 48px; min-width: 48px; padding: 0 17px; border-radius: 28px; background: #117653; color: white; box-shadow: 0 5px 14px #11765329; font-size: 14px; font-weight: 800; }
-.whatsapp-float>.icon { width: 26px; height: 26px; animation: soft-float 5s 1s ease-in-out infinite; }
+.whatsapp-float { position: fixed; z-index: 40; right: 16px; right: calc(16px + var(--safe-right)); bottom: 16px; bottom: calc(16px + var(--safe-bottom)); display: grid; place-items: center; width: 54px; height: 54px; padding: 0; border-radius: 50%; background: #25d366; color: white; box-shadow: 0 4px 14px #075e5438; animation: soft-breath 5s ease-in-out infinite; }
+.whatsapp-float>.icon { width: 29px; height: 29px; }
+@keyframes soft-breath { 0%,100% { box-shadow: 0 4px 14px #075e5438; } 50% { box-shadow: 0 5px 19px #075e5450; } }
 @keyframes soft-float { 0%,100% { transform: translateY(1px); } 50% { transform: translateY(-2px); } }
 
 /* 9. Adaptación a tablet y celular, priorizando 390 px. */
@@ -203,8 +212,7 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
   .quick-chip { flex-direction: column; gap: 3px; font-size: 12px; }
 }
 @media (max-width: 600px) {
-  :root { --dock-height: 68px; }
-  .app-scroll { scroll-padding-top: 74px; }
+  .app-scroll { scroll-padding-top: calc(74px + var(--safe-top)); }
   section, header, main, .families, .catalog-family, footer { scroll-margin-top: 8px; }
   .cover { padding: 8px 16px 12px; border-radius: 0 0 23px 23px; }
   .topline { font-size: 7.5px; letter-spacing: .055em; }
@@ -221,7 +229,7 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
   .search-clear { width: 32px; }
   .category-menu summary { min-height: 46px; width: 46px; padding: 0; border-radius: 14px; }
   .category-menu summary>span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-  .category-links { position: fixed; top: auto; bottom: calc(var(--dock-height) + env(safe-area-inset-bottom,0px) + 10px); left: 10px; right: 10px; padding: 13px; gap: 13px; max-height: min(65dvh,calc(100dvh - var(--dock-height) - 100px)); }
+  .category-links { position: fixed; top: auto; bottom: calc(86px + var(--safe-bottom)); left: calc(10px + var(--safe-left)); right: calc(10px + var(--safe-right)); padding: 13px; gap: 13px; max-height: 60vh; max-height: min(65dvh,calc(100dvh - 170px - var(--safe-top) - var(--safe-bottom))); }
   .nav-group a { font-size: 13px; padding: 8px 4px; }
   .nav-group .nav-family { align-items: flex-start; }
   .nav-group .icon { width: 19px; height: 19px; }
@@ -275,18 +283,23 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
   .footer-welcome>p:not(.eyebrow) { font-size: 18px; }
   .footer-contact address>a { font-size: 14px; }
   .footer-thanks { padding: 28px 0; }
-  .utility-dock { padding: 9px 17px calc(9px + env(safe-area-inset-bottom,0px)); }
   .signature-label { font-size: 7px; letter-spacing: .1em; }
   .signature-brand strong { font-size: 12px; }
   .signature-brand img { width: 31px; height: 27px; }
-  .whatsapp-float { padding: 0; width: 48px; }
-  .whatsapp-float>span { display: none; }
+}
+/* Ajuste de compatibilidad para etiquetas completas en 320–375 px. */
+@media (max-width: 389px) {
+  .family-card>img { width: 56px; height: 56px; }
+  .family-copy h3 { font-size: 13px; }
 }
 @media (max-width: 359px) {
+  .servimat-floating { padding: 7px 8px; }
+  .servimat-floating .signature-label { font-size: 6.5px; letter-spacing: .06em; }
+  .servimat-floating .signature-brand strong { font-size: 11px; }
   .brand-logo { width: 110px; height: 122px; }
   h1 { font-size: 38px; }
-  .family-card>img { width: 49px; height: 49px; }
-  .family-copy h3 { font-size: 14px; }
+  .family-card>img { width: 40px; height: 40px; }
+  .family-copy h3 { font-size: 12px; }
   .product-grid { grid-template-columns: minmax(0,1fr); }
   .product-card.wide-card { display: flex; }
   .wide-card .product-photo { aspect-ratio: 4/3; }
@@ -298,7 +311,7 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
 }
 @media print {
   .app-scroll { height: auto; overflow: visible; }
-  .utility-dock, .browse-bar, .quick-nav, .families, .subcategory-nav, .show-all, .description-toggle { display: none; }
+  .servimat-floating, .whatsapp-float, .browse-bar, .quick-nav, .families, .subcategory-nav, .show-all, .description-toggle { display: none; }
   .category-section::details-content { content-visibility: visible; }
   .product-card { break-inside: avoid; }
   .product-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }

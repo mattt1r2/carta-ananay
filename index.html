@@ -2,7 +2,7 @@
 <html lang="es-CL">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="Carta digital de Heladería Ananay. Helados, dulces y restaurant en San Javier.">
   <meta name="theme-color" content="#34136E">
   <title>Heladería Ananay | Carta</title>
@@ -12,11 +12,11 @@
 </head>
 <body>
   <a class="skip-link" href="#carta">Saltar a la carta</a>
-  <!-- La franja inferior tiene espacio reservado: nunca se superpone al catálogo. -->
+  <!-- Área desplazable de altura completa, con márgenes seguros para iOS. -->
   <div class="app-scroll" id="app-scroll" tabindex="-1">
   <!-- Portada compacta con el logo proporcionado por Ananay. -->
   <header id="inicio" class="cover">
-    <div class="topline"><span>HELADOS · DULCES · RESTAURANT</span><a href="#contacto">SAN JAVIER ↗</a></div>
+    <div class="topline"><span>HELADOS · DULCES · RESTAURANT</span><a href="#contacto">SAN JAVIER <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
     <div class="cover-inner">
       <img class="brand-logo" src="assets/img/logo-ananay-color.png" width="1254" height="1254" alt="Logo de Heladería Ananay" fetchpriority="high">
       <div class="cover-copy"><h1><span>Heladería</span> Ananay</h1><p class="tagline">Más que un antojo,<br>una sonrisa.</p></div>
@@ -26,7 +26,7 @@
 
   <!-- Búsqueda local y navegación por las ocho familias. -->
   <div class="browse-bar"><div class="browse-inner">
-    <div class="search-box" role="search"><label class="sr-only" for="menu-search">Buscar en la carta</label><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="menu-search" type="search" placeholder="¿Qué se te antoja hoy?" autocomplete="off" maxlength="100" aria-controls="carta"><button class="search-clear" type="button" aria-label="Limpiar búsqueda" hidden>×</button></div>
+    <div class="search-box" role="search"><label class="sr-only" for="menu-search">Buscar en la carta</label><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="menu-search" type="search" placeholder="¿Qué se te antoja hoy?" autocomplete="off" maxlength="100" aria-controls="carta"><button class="search-clear" type="button" aria-label="Limpiar búsqueda" hidden><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
     <details class="category-menu"><summary aria-label="Categorías"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg><span>Categorías</span></summary><nav class="category-links" aria-label="Todas las categorías"><div class="nav-group"><a class="nav-family" href="#familia-helados"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 13 5 9 5-9M6 13h12a3 3 0 0 0 1-5 7 7 0 0 0-14 0 3 3 0 0 0 1 5Z"/></svg>Helados y postres</a><div><a href="#postres">Postres</a><a href="#helados">Especialidades en helado</a><a href="#helados-divertidos">Helados divertidos</a></div></div><div class="nav-group"><a class="nav-family" href="#familia-promos"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 6.3L21 12l-6.3 2.7L12 21l-2.7-6.3L3 12l6.3-2.7Z"/></svg>Promociones</a><div><a href="#promociones">Menú Promos</a><a href="#combos">Combos</a><a href="#para-compartir">Para compartir</a><a href="#promo-pizza">Promo Pizza</a></div></div><div class="nav-group"><a class="nav-family" href="#familia-comida"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16M3 14h18M5 18h14M5 10a7 7 0 0 1 14 0M4 18v2h16v-2"/><path d="m8 13 4 3 4-3"/></svg>Comida rápida</a><div><a href="#desayunos">Desayunos</a><a href="#completos">Completos</a><a href="#papas">Papas</a><a href="#papas-de-la-casa">Papas de la casa</a><a href="#churrascos">Churrascos</a><a href="#hamburguesas">Hamburguesas</a><a href="#fajitas">Fajitas</a><a href="#snacks">Snacks</a></div></div><div class="nav-group"><a class="nav-family" href="#familia-pizzas"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 5 7 17L21 7A22 22 0 0 0 4 5ZM5 8a19 19 0 0 1 14 2M11 11h.01M12 16h.01M15 12h.01"/></svg>Pizzas</a><div><a href="#pizzas">Pizzas familiares</a></div></div><div class="nav-group"><a class="nav-family" href="#familia-wafles"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>Wafles</a><div><a href="#wafles">Wafles</a></div></div><div class="nav-group"><a class="nav-family" href="#familia-granizados"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 8 2 13h8l2-13ZM5 8h14M12 8l2-6h4"/></svg>Granizados</a><div><a href="#granizados">Granizados</a></div></div><div class="nav-group"><a class="nav-family" href="#familia-frutales"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7C1 1 1 15 8 21c2 1 2-1 4-1s2 2 4 1C23 15 23 1 12 7ZM12 7c0-4 3-5 5-5"/></svg>Frutales</a><div><a href="#vasos-y-frutillas">Vasos irresistibles y frutillas</a><a href="#frutales">Snacks frutales y agregados</a></div></div><div class="nav-group"><a class="nav-family" href="#familia-bebidas"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h13v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4ZM17 8h2a3 3 0 1 1 0 6h-2M8 2v2M13 2v2"/></svg>Bebidas</a><div><a href="#bebestibles">Bebestibles</a><a href="#bebidas-frias">Bebidas frías</a></div></div></nav></details>
   </div></div>
   <nav class="quick-nav" aria-label="Categorías rápidas"><a href="#familia-promos" class="quick-chip promos"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 6.3L21 12l-6.3 2.7L12 21l-2.7-6.3L3 12l6.3-2.7Z"/></svg><span>Promos</span></a><a href="#familia-comida" class="quick-chip food"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16M3 14h18M5 18h14M5 10a7 7 0 0 1 14 0M4 18v2h16v-2"/><path d="m8 13 4 3 4-3"/></svg><span>Comida rápida</span></a><a href="#familia-helados" class="quick-chip ice"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 13 5 9 5-9M6 13h12a3 3 0 0 0 1-5 7 7 0 0 0-14 0 3 3 0 0 0 1 5Z"/></svg><span>Helados</span></a><a href="#familia-wafles" class="quick-chip waffles"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg><span>Wafles</span></a><a href="#familia-granizados" class="quick-chip slush"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 8 2 13h8l2-13ZM5 8h14M12 8l2-6h4"/></svg><span>Granizados</span></a><a href="#familia-bebidas" class="quick-chip drinks"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h13v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4ZM17 8h2a3 3 0 1 1 0 6h-2M8 2v2M13 2v2"/></svg><span>Bebidas</span></a></nav>
@@ -35,12 +35,12 @@
   <main id="carta">
     <div class="menu-intro"><div><p class="eyebrow">PARA DISFRUTAR AQUÍ</p><h2>Tu próximo favorito</h2></div><p>Elige y pídeselo<br>a nuestro camarero.</p></div>
     <p class="search-status" role="status" aria-live="polite" aria-atomic="true" hidden></p>
-    <div class="search-empty" hidden><span aria-hidden="true">⌕</span><h3>No encontramos ese antojo</h3><p>Prueba con otro nombre o explora las categorías.</p><button type="button" class="reset-search">Ver toda la carta</button></div>
+    <div class="search-empty" hidden><span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 21l-5-5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0"/></svg></span><h3>No encontramos ese antojo</h3><p>Prueba con otro nombre o explora las categorías.</p><button type="button" class="reset-search">Ver toda la carta</button></div>
     <!-- Las 22 secciones y sus 207 tarjetas originales se conservan sin cambios. -->
-<div class="catalog-family" id="familia-helados"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 13 5 9 5-9M6 13h12a3 3 0 0 0 1-5 7 7 0 0 0-14 0 3 3 0 0 0 1 5Z"/></svg>Helados y postres</h2><a href="#familias" aria-label="Volver a las familias desde Helados y postres">↑</a></div><nav class="subcategory-nav" aria-label="Secciones de Helados y postres"><a href="#postres">Postres</a><a href="#helados">Especialidades en helado</a><a href="#helados-divertidos">Helados divertidos</a></nav>
+<div class="catalog-family" id="familia-helados"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 13 5 9 5-9M6 13h12a3 3 0 0 0 1-5 7 7 0 0 0-14 0 3 3 0 0 0 1 5Z"/></svg>Helados y postres</h2><a href="#familias" aria-label="Volver a las familias desde Helados y postres"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></div><nav class="subcategory-nav" aria-label="Secciones de Helados y postres"><a href="#postres">Postres</a><a href="#helados">Especialidades en helado</a><a href="#helados-divertidos">Helados divertidos</a></nav>
     <section id="postres" class="menu-section sweet-section" aria-labelledby="title-postres">
       <details class="category-section" open>
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-postres">Postres</span><span class="category-count">20 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-postres">Postres</span><span class="category-count">20 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-postres">
       <div class="product-grid">
 <article data-fudo-ids="156" class="product-card">
@@ -188,7 +188,7 @@
     </section>
     <section id="helados" class="menu-section sweet-section" aria-labelledby="title-helados">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-helados">Especialidades en helado</span><span class="category-count">24 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-helados">Especialidades en helado</span><span class="category-count">24 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-helados">
       <div class="product-grid">
 <article data-fudo-ids="166" class="product-card">
@@ -354,7 +354,7 @@
     </section>
     <section id="helados-divertidos" class="menu-section sweet-section" aria-labelledby="title-helados-divertidos">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-helados-divertidos">Helados divertidos</span><span class="category-count">7 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-helados-divertidos">Helados divertidos</span><span class="category-count">7 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-helados-divertidos">
       <div class="product-grid">
 <article data-fudo-ids="171" class="product-card">
@@ -411,10 +411,10 @@
       </details>
     </section>
 </div>
-<div class="catalog-family" id="familia-promos"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 6.3L21 12l-6.3 2.7L12 21l-2.7-6.3L3 12l6.3-2.7Z"/></svg>Promociones</h2><a href="#familias" aria-label="Volver a las familias desde Promociones">↑</a></div><nav class="subcategory-nav" aria-label="Secciones de Promociones"><a href="#promociones">Menú Promos</a><a href="#combos">Combos</a><a href="#para-compartir">Para compartir</a><a href="#promo-pizza">Promo Pizza</a></nav>
+<div class="catalog-family" id="familia-promos"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 6.3L21 12l-6.3 2.7L12 21l-2.7-6.3L3 12l6.3-2.7Z"/></svg>Promociones</h2><a href="#familias" aria-label="Volver a las familias desde Promociones"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></div><nav class="subcategory-nav" aria-label="Secciones de Promociones"><a href="#promociones">Menú Promos</a><a href="#combos">Combos</a><a href="#para-compartir">Para compartir</a><a href="#promo-pizza">Promo Pizza</a></nav>
     <section id="promociones" class="menu-section" aria-labelledby="title-promociones">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-promociones">Menú Promos</span><span class="category-count">14 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-promociones">Menú Promos</span><span class="category-count">14 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-promociones">
       <div class="product-grid">
 <article data-fudo-ids="47" class="product-card promo-card">
@@ -521,7 +521,7 @@
     </section>
     <section id="combos" class="menu-section" aria-labelledby="title-combos">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-combos">Combos</span><span class="category-count">7 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-combos">Combos</span><span class="category-count">7 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-combos">
       <div class="product-grid">
 <article data-fudo-ids="111" class="product-card promo-card">
@@ -580,7 +580,7 @@
     </section>
     <section id="para-compartir" class="menu-section" aria-labelledby="title-para-compartir">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-para-compartir">Para compartir</span><span class="category-count">12 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-para-compartir">Para compartir</span><span class="category-count">12 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-para-compartir">
       <div class="product-grid">
 <article data-fudo-ids="118" class="product-card promo-card">
@@ -673,7 +673,7 @@
     </section>
     <section id="promo-pizza" class="menu-section" aria-labelledby="title-promo-pizza">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-promo-pizza">Promo Pizza</span><span class="category-count">4 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-promo-pizza">Promo Pizza</span><span class="category-count">4 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-promo-pizza">
       <div class="product-grid">
 <article data-fudo-ids="135" class="product-card promo-card">
@@ -710,10 +710,10 @@
       </details>
     </section>
 </div>
-<div class="catalog-family" id="familia-comida"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16M3 14h18M5 18h14M5 10a7 7 0 0 1 14 0M4 18v2h16v-2"/><path d="m8 13 4 3 4-3"/></svg>Comida rápida</h2><a href="#familias" aria-label="Volver a las familias desde Comida rápida">↑</a></div><nav class="subcategory-nav" aria-label="Secciones de Comida rápida"><a href="#desayunos">Desayunos</a><a href="#completos">Completos</a><a href="#papas">Papas</a><a href="#papas-de-la-casa">Papas de la casa</a><a href="#churrascos">Churrascos</a><a href="#hamburguesas">Hamburguesas</a><a href="#fajitas">Fajitas</a><a href="#snacks">Snacks</a></nav>
+<div class="catalog-family" id="familia-comida"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16M3 14h18M5 18h14M5 10a7 7 0 0 1 14 0M4 18v2h16v-2"/><path d="m8 13 4 3 4-3"/></svg>Comida rápida</h2><a href="#familias" aria-label="Volver a las familias desde Comida rápida"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></div><nav class="subcategory-nav" aria-label="Secciones de Comida rápida"><a href="#desayunos">Desayunos</a><a href="#completos">Completos</a><a href="#papas">Papas</a><a href="#papas-de-la-casa">Papas de la casa</a><a href="#churrascos">Churrascos</a><a href="#hamburguesas">Hamburguesas</a><a href="#fajitas">Fajitas</a><a href="#snacks">Snacks</a></nav>
     <section id="desayunos" class="menu-section" aria-labelledby="title-desayunos">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-desayunos">Desayunos</span><span class="category-count">6 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-desayunos">Desayunos</span><span class="category-count">6 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-desayunos">
       <div class="product-grid">
 <article data-fudo-ids="41" class="product-card">
@@ -765,7 +765,7 @@
     </section>
     <section id="completos" class="menu-section" aria-labelledby="title-completos">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-completos">Completos</span><span class="category-count">6 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-completos">Completos</span><span class="category-count">6 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-completos">
       <div class="product-grid">
 <article data-fudo-ids="61" class="product-card">
@@ -813,7 +813,7 @@
     </section>
     <section id="papas" class="menu-section" aria-labelledby="title-papas">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-papas">Papas</span><span class="category-count">13 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-papas">Papas</span><span class="category-count">13 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-papas">
       <div class="product-grid">
 <article data-fudo-ids="67,68" class="product-card">
@@ -909,7 +909,7 @@
     </section>
     <section id="papas-de-la-casa" class="menu-section" aria-labelledby="title-papas-de-la-casa">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-papas-de-la-casa">Papas de la casa</span><span class="category-count">6 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-papas-de-la-casa">Papas de la casa</span><span class="category-count">6 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-papas-de-la-casa">
       <div class="product-grid">
 <article data-fudo-ids="75,76,77" class="product-card">
@@ -960,7 +960,7 @@
     </section>
     <section id="churrascos" class="menu-section" aria-labelledby="title-churrascos">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-churrascos">Churrascos</span><span class="category-count">10 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-churrascos">Churrascos</span><span class="category-count">10 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-churrascos">
       <div class="product-grid">
 <article data-fudo-ids="85" class="product-card">
@@ -1039,7 +1039,7 @@
     </section>
     <section id="hamburguesas" class="menu-section" aria-labelledby="title-hamburguesas">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-hamburguesas">Hamburguesas</span><span class="category-count">8 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-hamburguesas">Hamburguesas</span><span class="category-count">8 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-hamburguesas">
       <div class="product-grid">
 <article data-fudo-ids="95" class="product-card">
@@ -1105,7 +1105,7 @@
     </section>
     <section id="fajitas" class="menu-section" aria-labelledby="title-fajitas">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-fajitas">Fajitas</span><span class="category-count">1 opción</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-fajitas">Fajitas</span><span class="category-count">1 opción</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-fajitas">
       <div class="product-grid">
 <article data-fudo-ids="103" class="product-card">
@@ -1122,7 +1122,7 @@
     </section>
     <section id="snacks" class="menu-section" aria-labelledby="title-snacks">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-snacks">Snacks</span><span class="category-count">4 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-snacks">Snacks</span><span class="category-count">4 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-snacks">
       <div class="product-grid">
 <article data-fudo-ids="33,104,105" class="product-card">
@@ -1158,10 +1158,10 @@
       </details>
     </section>
 </div>
-<div class="catalog-family" id="familia-pizzas"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 5 7 17L21 7A22 22 0 0 0 4 5ZM5 8a19 19 0 0 1 14 2M11 11h.01M12 16h.01M15 12h.01"/></svg>Pizzas</h2><a href="#familias" aria-label="Volver a las familias desde Pizzas">↑</a></div><nav class="subcategory-nav" aria-label="Secciones de Pizzas"><a href="#pizzas">Pizzas familiares</a></nav>
+<div class="catalog-family" id="familia-pizzas"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 5 7 17L21 7A22 22 0 0 0 4 5ZM5 8a19 19 0 0 1 14 2M11 11h.01M12 16h.01M15 12h.01"/></svg>Pizzas</h2><a href="#familias" aria-label="Volver a las familias desde Pizzas"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></div><nav class="subcategory-nav" aria-label="Secciones de Pizzas"><a href="#pizzas">Pizzas familiares</a></nav>
     <section id="pizzas" class="menu-section" aria-labelledby="title-pizzas">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-pizzas">Pizzas familiares</span><span class="category-count">6 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-pizzas">Pizzas familiares</span><span class="category-count">6 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-pizzas">
       <div class="product-grid">
 <article data-fudo-ids="130" class="product-card">
@@ -1215,10 +1215,10 @@
       </details>
     </section>
 </div>
-<div class="catalog-family" id="familia-wafles"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>Wafles</h2><a href="#familias" aria-label="Volver a las familias desde Wafles">↑</a></div><nav class="subcategory-nav" aria-label="Secciones de Wafles"><a href="#wafles">Wafles</a></nav>
+<div class="catalog-family" id="familia-wafles"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>Wafles</h2><a href="#familias" aria-label="Volver a las familias desde Wafles"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></div><nav class="subcategory-nav" aria-label="Secciones de Wafles"><a href="#wafles">Wafles</a></nav>
     <section id="wafles" class="menu-section sweet-section" aria-labelledby="title-wafles">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-wafles">Wafles</span><span class="category-count">8 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-wafles">Wafles</span><span class="category-count">8 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-wafles">
       <div class="product-grid">
 <article data-fudo-ids="195" class="product-card">
@@ -1280,10 +1280,10 @@
       </details>
     </section>
 </div>
-<div class="catalog-family" id="familia-granizados"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 8 2 13h8l2-13ZM5 8h14M12 8l2-6h4"/></svg>Granizados</h2><a href="#familias" aria-label="Volver a las familias desde Granizados">↑</a></div><nav class="subcategory-nav" aria-label="Secciones de Granizados"><a href="#granizados">Granizados</a></nav>
+<div class="catalog-family" id="familia-granizados"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 8 2 13h8l2-13ZM5 8h14M12 8l2-6h4"/></svg>Granizados</h2><a href="#familias" aria-label="Volver a las familias desde Granizados"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></div><nav class="subcategory-nav" aria-label="Secciones de Granizados"><a href="#granizados">Granizados</a></nav>
     <section id="granizados" class="menu-section sweet-section" aria-labelledby="title-granizados">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-granizados">Granizados</span><span class="category-count">10 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-granizados">Granizados</span><span class="category-count">10 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-granizados">
       <div class="product-grid">
 <article data-fudo-ids="201" class="product-card">
@@ -1361,10 +1361,10 @@
       </details>
     </section>
 </div>
-<div class="catalog-family" id="familia-frutales"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7C1 1 1 15 8 21c2 1 2-1 4-1s2 2 4 1C23 15 23 1 12 7ZM12 7c0-4 3-5 5-5"/></svg>Frutales</h2><a href="#familias" aria-label="Volver a las familias desde Frutales">↑</a></div><nav class="subcategory-nav" aria-label="Secciones de Frutales"><a href="#vasos-y-frutillas">Vasos irresistibles y frutillas</a><a href="#frutales">Snacks frutales y agregados</a></nav>
+<div class="catalog-family" id="familia-frutales"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7C1 1 1 15 8 21c2 1 2-1 4-1s2 2 4 1C23 15 23 1 12 7ZM12 7c0-4 3-5 5-5"/></svg>Frutales</h2><a href="#familias" aria-label="Volver a las familias desde Frutales"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></div><nav class="subcategory-nav" aria-label="Secciones de Frutales"><a href="#vasos-y-frutillas">Vasos irresistibles y frutillas</a><a href="#frutales">Snacks frutales y agregados</a></nav>
     <section id="vasos-y-frutillas" class="menu-section sweet-section" aria-labelledby="title-vasos-y-frutillas">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-vasos-y-frutillas">Vasos irresistibles y frutillas</span><span class="category-count">13 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-vasos-y-frutillas">Vasos irresistibles y frutillas</span><span class="category-count">13 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-vasos-y-frutillas">
       <div class="product-grid">
 <article data-fudo-ids="178,179" class="product-card">
@@ -1466,7 +1466,7 @@
     </section>
     <section id="frutales" class="menu-section sweet-section" aria-labelledby="title-frutales">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-frutales">Snacks frutales y agregados</span><span class="category-count">5 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-frutales">Snacks frutales y agregados</span><span class="category-count">5 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-frutales">
       <div class="product-grid">
 <article data-fudo-ids="217,218" class="product-card">
@@ -1511,10 +1511,10 @@
       </details>
     </section>
 </div>
-<div class="catalog-family" id="familia-bebidas"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h13v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4ZM17 8h2a3 3 0 1 1 0 6h-2M8 2v2M13 2v2"/></svg>Bebidas</h2><a href="#familias" aria-label="Volver a las familias desde Bebidas">↑</a></div><nav class="subcategory-nav" aria-label="Secciones de Bebidas"><a href="#bebestibles">Bebestibles</a><a href="#bebidas-frias">Bebidas frías</a></nav>
+<div class="catalog-family" id="familia-bebidas"><div class="family-heading"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h13v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4ZM17 8h2a3 3 0 1 1 0 6h-2M8 2v2M13 2v2"/></svg>Bebidas</h2><a href="#familias" aria-label="Volver a las familias desde Bebidas"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></div><nav class="subcategory-nav" aria-label="Secciones de Bebidas"><a href="#bebestibles">Bebestibles</a><a href="#bebidas-frias">Bebidas frías</a></nav>
     <section id="bebestibles" class="menu-section" aria-labelledby="title-bebestibles">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-bebestibles">Bebestibles</span><span class="category-count">19 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-bebestibles">Bebestibles</span><span class="category-count">19 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-bebestibles">
       <div class="product-grid">
 <article data-fudo-ids="139" class="product-card">
@@ -1658,7 +1658,7 @@
     </section>
     <section id="bebidas-frias" class="menu-section sweet-section" aria-labelledby="title-bebidas-frias">
       <details class="category-section">
-        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-bebidas-frias">Bebidas frías</span><span class="category-count">4 opciones</span></span><span class="expand-icon" aria-hidden="true">⌄</span></summary>
+        <summary class="section-heading"><span class="category-title"><span class="section-name" id="title-bebidas-frias">Bebidas frías</span><span class="category-count">4 opciones</span></span><span class="expand-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></summary>
         <div class="section-content" id="content-bebidas-frias">
       <div class="product-grid">
 <article data-fudo-ids="210" class="product-card">
@@ -1698,16 +1698,14 @@
   </main>
   <!-- Información del local. Editar el horario aquí cuando esté confirmado. -->
   <footer id="contacto" class="site-footer">
-    <div class="footer-main"><div class="footer-welcome"><p class="eyebrow">INFORMACIÓN DEL LOCAL</p><h2>Heladería Ananay</h2><p>Los buenos momentos<br>saben mejor juntos.</p><a class="footer-back" href="#inicio">Volver al inicio <span aria-hidden="true">↑</span></a></div>
-    <div class="footer-contact"><address><span>DIRECCIÓN</span><a href="https://www.google.com/maps/search/?api=1&amp;query=ARTURO+PRAT+2573+SAN+JAVIER+CHILE" target="_blank" rel="noopener noreferrer">ARTURO PRAT 2573, SAN JAVIER ↗</a><span>TELÉFONO</span><a href="tel:+56932834024">+56 9 3283 4024</a><span>EMAIL</span><a href="mailto:Heladeriaananay2026@gmail.com">Heladeriaananay2026@gmail.com</a></address><p class="opening-hours"><span>HORARIO</span>Horario por confirmar</p><a class="footer-whatsapp" href="https://wa.me/56932834024" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.7 7.5L3 21l1.6-4.8a8.5 8.5 0 1 1 15.9-4.6Z"/><path d="M8 7c-2 3 2 7 5 8 2 1 3-1 3-2l-3-1-1 1c-2-1-3-2-3-3l1-1-1-2Z"/></svg><span>WhatsApp<br>+56 9 3283 4024</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div></div>
+    <div class="footer-main"><div class="footer-welcome"><p class="eyebrow">INFORMACIÓN DEL LOCAL</p><h2>Heladería Ananay</h2><p>Los buenos momentos<br>saben mejor juntos.</p><a class="footer-back" href="#inicio">Volver al inicio <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></span></a></div>
+    <div class="footer-contact"><address><span>DIRECCIÓN</span><a href="https://www.google.com/maps/search/?api=1&amp;query=ARTURO+PRAT+2573+SAN+JAVIER+CHILE" target="_blank" rel="noopener noreferrer">ARTURO PRAT 2573, SAN JAVIER <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><span>TELÉFONO</span><a href="tel:+56932834024">+56 9 3283 4024</a><span>EMAIL</span><a href="mailto:Heladeriaananay2026@gmail.com">Heladeriaananay2026@gmail.com</a></address><p class="opening-hours"><span>HORARIO</span>Horario por confirmar</p><a class="footer-whatsapp" href="https://wa.me/56932834024" target="_blank" rel="noopener noreferrer"><svg class="icon whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>WhatsApp<br>+56 9 3283 4024</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div></div>
     <div class="footer-thanks"><h3>Gracias por tu visita</h3><p>Dulces momentos para compartir</p></div>
     <div class="footer-bottom"><a class="servimat-signature" href="https://www.instagram.com/servimat._/" target="_blank" rel="noopener noreferrer" aria-label="Diseño y desarrollo por Servimat. Visitar Instagram en otra pestaña"><span class="signature-label">DESIGN &amp; DEVELOPMENT BY</span><span class="signature-brand"><img src="assets/img/servimat/logo-servimat.png" alt="" width="834" height="834"><strong>SERVIMAT™</strong><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></span></a></div>
   </footer>
   </div>
-  <!-- Controles fijos fuera del área desplazable: firma discreta y contacto. -->
-  <div class="utility-dock">
+  <!-- Flotantes independientes, sin barra inferior ni altura reservada. -->
     <a class="servimat-floating servimat-signature" href="https://www.instagram.com/servimat._/" target="_blank" rel="noopener noreferrer" aria-label="Diseño y desarrollo por Servimat. Visitar Instagram en otra pestaña"><span class="signature-label">DESIGN &amp; DEVELOPMENT BY</span><span class="signature-brand"><img src="assets/img/servimat/logo-servimat.png" alt="" width="834" height="834"><strong>SERVIMAT™</strong><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></span></a>
-    <a class="whatsapp-float" href="https://wa.me/56932834024" target="_blank" rel="noopener noreferrer" aria-label="Contactar a Heladería Ananay por WhatsApp"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.7 7.5L3 21l1.6-4.8a8.5 8.5 0 1 1 15.9-4.6Z"/><path d="M8 7c-2 3 2 7 5 8 2 1 3-1 3-2l-3-1-1 1c-2-1-3-2-3-3l1-1-1-2Z"/></svg><span>Conversemos</span></a>
-  </div>
+    <a class="whatsapp-float" href="https://wa.me/56932834024" target="_blank" rel="noopener noreferrer" aria-label="Contactar a Heladería Ananay por WhatsApp"><svg class="icon whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
 </body>
 </html>

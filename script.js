@@ -202,7 +202,7 @@
   if (location.hash) navigateTo(location.hash, false, false, true);
   window.addEventListener('load', () => navigateTo(location.hash || '#inicio', false, false, true), { once: true });
 
-  /* Firma flotante: desaparece al acercarse el footer; WhatsApp no invade el contenido. */
+  /* Firma independiente: desaparece al acercarse el footer, donde queda la firma permanente. */
   const signature = document.querySelector('.servimat-floating');
   const footerObserver = new IntersectionObserver(entries => {
     const nearFooter = entries[0].isIntersecting;
