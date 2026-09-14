@@ -1,100 +1,306 @@
-/* 1. Paleta Ananay y base accesible */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
-:root{color-scheme:dark;--background:#2a0907;--burgundy:#4a0d12;--gold:#d6a63a;--gold-light:#f2cf70;--cream:#fff4db;--muted:#dfc9ae;--border:#875b2f;--fuchsia:#f52f9a;--purple:#5b22a8;--blue:#12b9e8;--nav-height:120px}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--background);color:var(--cream);font-family:'Montserrat',Arial,sans-serif;font-size:16px;line-height:1.65}
-img{display:block;max-width:100%;height:auto}
-a{color:inherit;text-decoration:none}
-a,summary{-webkit-tap-highlight-color:transparent}
-a:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:5px}
-h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.2}
-section,header,main{scroll-margin-top:var(--nav-height)}
-.skip-link{position:fixed;top:-100px;left:16px;z-index:100;padding:12px 20px;background:var(--gold-light);color:var(--background)}
-.skip-link:focus{top:12px}
-.eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.19em;color:var(--gold-light);line-height:1.7}
-
-/* 2. Portada con marco doble y logo de la carta original */
-.cover{position:relative;margin:20px auto 0;width:calc(100% - 40px);max-width:1380px;padding:23px 42px 25px;border:1px solid var(--gold);background:radial-gradient(ellipse at 25% 50%,#5b1a20aa,transparent 58%),linear-gradient(125deg,#320b0a,#1d0608);isolation:isolate}
-.cover::before{content:'';position:absolute;inset:6px;border:1px solid #97662c;pointer-events:none;z-index:-1}
-.cover::after{content:'✦';position:absolute;top:-18px;left:calc(50% - 24px);width:48px;text-align:center;font-size:25px;color:var(--gold);background:var(--background)}
-.topline{display:flex;justify-content:space-between;gap:18px;font-size:.64rem;letter-spacing:.18em;color:var(--muted)}
-.cover-inner{display:flex;justify-content:center;align-items:center;gap:clamp(35px,7vw,100px);padding:28px 0 24px}
-.brand-logo{width:clamp(200px,25vw,310px);aspect-ratio:605/576;object-fit:contain;mix-blend-mode:lighten}
-.cover-copy{text-align:center}
-h1{font-family:'Cinzel',Georgia,serif;font-weight:500;font-size:clamp(52px,6vw,84px);color:var(--gold-light);letter-spacing:.04em}
-h1 span{display:block;font-size:.3em;letter-spacing:.25em;margin:12px 0 3px}
-.tagline{font-family:Georgia,serif;font-size:clamp(23px,2.3vw,30px);font-style:italic;color:var(--cream);margin-top:9px}
-.ornament{display:flex;align-items:center;justify-content:center;gap:15px;color:var(--gold);margin:15px auto 9px;max-width:260px}
-.ornament::before,.ornament::after{content:'';height:1px;background:linear-gradient(90deg,transparent,var(--gold));flex:1}.ornament::after{transform:rotate(180deg)}
-.cover-specialties{font-size:.78rem;letter-spacing:.1em;color:var(--muted)}
-.gold-link{display:inline-flex;align-items:center;justify-content:center;gap:28px;min-height:48px;padding:11px 25px;border:1px solid var(--gold);color:var(--gold-light);font-size:.8rem;font-weight:600;margin-top:24px;transition:background .2s,color .2s}
-.gold-link:hover{background:var(--gold-light);color:var(--background)}
-.cover-note{text-align:center;font-size:.76rem;color:var(--muted)}
-
-/* 3. Categorías sticky; desplegable nativo en pantallas pequeñas */
-.navigation{position:sticky;top:0;z-index:20;border-bottom:1px solid #895934;background:#240808f7;backdrop-filter:blur(12px);margin-top:20px}
-.desktop-nav{display:flex;justify-content:center;flex-wrap:wrap;max-width:1240px;margin:auto;padding:9px 20px;gap:0 12px}
-.desktop-nav a{display:flex;align-items:center;min-height:40px;font-size:.77rem;padding:0 9px;border-radius:3px;transition:color .2s,background .2s}
-.desktop-nav a:hover{color:var(--gold-light);background:#ffffff09}
-.mobile-nav{display:none}
-
-/* 4. Títulos y grillas de productos */
-.menu-intro{display:flex;align-items:center;justify-content:space-between;max-width:1240px;margin:0 auto;padding:35px 28px 0;gap:20px}
-.menu-intro p{font-family:Georgia,serif;font-size:1.8rem;font-style:italic}.menu-intro>span:last-child{color:var(--gold)}
-.menu-section{padding:52px max(28px,calc((100% - 1184px)/2)) 64px;border-bottom:1px solid #71432055;background:radial-gradient(ellipse at 100% 10%,#4a0d1240,transparent 70%)}
-.section-heading{text-align:center;margin:0 auto 32px;max-width:1000px}
-.heading-line{display:flex;justify-content:center;align-items:center;gap:20px;margin-top:7px}
-.heading-line>span{color:var(--gold);font-size:20px}
-h2{font-family:'Cinzel',Georgia,serif;font-size:clamp(28px,3.1vw,43px);font-weight:500;color:var(--gold-light)}
-.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;align-items:stretch}
-.product-card{min-width:0;display:flex;flex-direction:column;background:#200708;border:1px solid var(--border);border-radius:15px 3px 15px 3px;overflow:hidden;box-shadow:0 12px 30px #10000030}
-.product-photo{position:relative;background:#200808;aspect-ratio:4/3;overflow:hidden;border-bottom:1px solid #885b2e80}
-.product-photo img{width:100%;height:100%;object-fit:contain}
-.product-info{display:flex;flex-direction:column;flex:1;padding:23px 24px 24px;min-width:0}
-.product-info h3{font-family:'Cinzel',Georgia,serif;font-size:1.22rem;font-weight:600;color:var(--cream);overflow-wrap:anywhere}
-.product-description{color:var(--muted);font-size:.88rem;line-height:1.65;margin:12px 0 20px}
-.price{margin-top:auto;padding-top:20px;font-family:'Montserrat',Arial,sans-serif;font-size:1.55rem;font-weight:600;letter-spacing:-.035em;color:var(--gold-light);white-space:nowrap}
-.price-options{margin:20px 0 0;padding-top:12px;border-top:1px solid #875b2f80;margin-top:auto}
-.price-options>div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:8px}
-.price-options dt{color:var(--muted);font-size:.86rem}
-.price-options dd{font-weight:600;font-size:1.16rem;white-space:nowrap;color:var(--gold-light);margin:0}
-.extras{display:flex;gap:32px;align-items:flex-start;padding:22px 26px;border:1px solid var(--border);margin-top:26px;background:#1e070855;border-radius:4px}
-.extras h3{color:var(--gold-light);font-family:'Cinzel',Georgia,serif;font-weight:500;font-size:1.1rem;padding-top:5px}
-.extras dl{margin:0;flex:1}.extras dl>div{display:flex;justify-content:space-between;gap:25px;padding:6px 0}.extras dt{font-size:.86rem;color:var(--muted)}.extras dd{margin:0;font-weight:600;color:var(--gold-light);white-space:nowrap}
-
-/* 5. Promociones y universo dulce */
-.catalog-subheading{font-family:'Cinzel',Georgia,serif;color:var(--gold-light);font-size:1.3rem;font-weight:500;margin:38px 0 22px;line-height:1.4;overflow-wrap:anywhere}
-.promo-card{border-color:#bd8b38;box-shadow:0 0 0 3px #d6a63a08,0 12px 30px #10000030}
-.promo-label{position:absolute;top:14px;left:14px;background:var(--gold-light);color:#2a0907;font-size:.63rem;font-weight:700;letter-spacing:.13em;padding:4px 10px;border-radius:2px}
-.sweet-section{background:radial-gradient(ellipse at 0 0,#5b22a838,transparent 50%),radial-gradient(ellipse at 100% 65%,#f52f9a10,transparent 45%),#160d26;border-bottom-color:#764b9b55}
-.sweet-section .section-heading .eyebrow{color:#e7b0ee}
-.sweet-section .heading-line>span:first-child{color:#ff81c6}.sweet-section .heading-line>span:last-child{color:#69d7f5}
-.sweet-section .product-card{background:linear-gradient(145deg,#251236,#190d27);border-color:#916a43}
-.sweet-section .product-photo{background:#150b23;border-bottom-color:#8a487280}
-.sweet-section .product-description,.sweet-section .price-options dt{color:#e2cfe7}
-.sweet-section .extras{background:#1c0e2b}
-
-/* 6. Cierre */
-.site-footer{text-align:center;padding:70px 24px 65px;background:radial-gradient(ellipse at 50% 0,#5b22a844,transparent 70%),#12091e;border-top:1px solid var(--gold)}
-.footer-star{display:block;color:var(--gold);font-size:30px;margin-bottom:18px}
-.footer-brand{font-family:'Cinzel',Georgia,serif;font-size:1.1rem;color:var(--muted);margin-bottom:14px}.site-footer h2{font-size:clamp(26px,3vw,36px);margin-bottom:15px}.site-footer>p:last-of-type{color:#ddc9e0;font-family:Georgia,serif;font-size:1.3rem;font-style:italic}
-
-/* 7. Tablet y celular: sin anchos fijos ni desplazamiento horizontal */
-@media(min-width:1500px){.product-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.menu-section{padding-left:max(32px,calc((100% - 1380px)/2));padding-right:max(32px,calc((100% - 1380px)/2))}}
-@media(max-width:1000px){:root{--nav-height:160px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cover{padding-left:26px;padding-right:26px}.desktop-nav{gap:0 4px}.desktop-nav a{font-size:.72rem}.cover-inner{gap:32px}}
-@media(max-width:700px){
-  :root{--nav-height:78px}
-  .cover{width:calc(100% - 28px);margin-top:18px;padding:22px 20px 23px}.topline{font-size:.51rem;letter-spacing:.12em}
-  .cover-inner{flex-direction:column;gap:13px;padding:23px 0 20px}.brand-logo{width:144px}.cover-copy .eyebrow{font-size:.59rem;letter-spacing:.16em}h1{font-size:49px;letter-spacing:.015em}h1 span{font-size:17px;margin:9px 0 4px;letter-spacing:.18em}.tagline{font-size:23px;margin-top:9px}.ornament{margin-top:11px;margin-bottom:7px}.cover-specialties{font-size:.68rem;letter-spacing:.035em}.gold-link{margin-top:20px}.cover-note{font-size:.69rem;max-width:260px;margin:auto}
-  .navigation{margin-top:18px}.desktop-nav{display:none}.mobile-nav{display:flex;align-items:center;justify-content:space-between;padding:7px 16px;gap:10px;position:relative}.mobile-nav>a{display:flex;min-height:48px;align-items:center;font-size:.8rem}.nav-home{font-family:'Cinzel',Georgia,serif;color:var(--gold-light);font-size:1.45rem!important}.nav-home span{font-size:.65rem;padding-left:3px}
-  .category-menu{position:static}.category-menu summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;font-size:.76rem;font-weight:600;color:var(--gold-light);min-height:48px;border:1px solid #97682e;padding:0 12px;border-radius:3px}.category-menu summary::-webkit-details-marker{display:none}.category-menu[open] summary{background:#4a0d12}
-  .category-links{position:absolute;top:100%;left:12px;right:12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-height:55dvh;overflow-y:auto;overscroll-behavior:contain;background:#290c12;border:1px solid var(--gold);box-shadow:0 16px 40px #000a;padding:12px;gap:3px;z-index:25}.category-links a{font-size:.8rem;display:flex;align-items:center;min-height:44px;padding:8px 10px;border-radius:3px}.category-links a:hover{background:#5a1e29;color:var(--gold-light)}
-  .menu-intro{padding:29px 22px 0;gap:12px}.menu-intro .eyebrow{max-width:115px;font-size:.58rem}.menu-intro p{font-size:1.45rem}
-  .menu-section{padding:38px 20px 45px}.section-heading{margin-bottom:25px}.section-heading .eyebrow{font-size:.6rem}.heading-line{gap:12px}h2{font-size:27px;overflow-wrap:anywhere}.heading-line>span{font-size:13px;flex-shrink:0}
-  .product-grid{grid-template-columns:minmax(0,1fr);gap:23px}.product-info{padding:21px 22px 23px}.product-info h3{font-size:1.22rem}.product-description{font-size:1rem}.price{font-size:1.55rem}.product-photo{aspect-ratio:4/3}
-  .extras{display:block;padding:20px}.extras h3{margin-bottom:8px}.extras dl>div{gap:15px}.extras dt{font-size:.81rem}.extras dd{font-size:.92rem}.site-footer{padding:48px 24px}
+/* 1. Identidad Ananay: superficies claras y acentos del logo. */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nunito+Sans:wght@400;600;700;800;900&display=swap');
+:root {
+  color-scheme: light;
+  --ink: #281c3d;
+  --purple: #5b22a8;
+  --deep: #34136e;
+  --pink: #c61072;
+  --fuchsia: #f52f9a;
+  --cyan: #20c4f4;
+  --cream: #fff9f5;
+  --muted: #70647c;
+  --line: #ebdfef;
+  --dock-height: 74px;
+  --page-width: 1160px;
 }
-/* 8. Preferencias de movimiento e impresión */
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-@media print{.navigation,.skip-link,.gold-link{display:none}.cover{break-after:page}.product-card{break-inside:avoid}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--cream); color: var(--ink); font: 16px/1.5 'Nunito Sans', Arial, sans-serif; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+button, summary, a { -webkit-tap-highlight-color: transparent; }
+button, summary { cursor: pointer; }
+button { color: inherit; }
+button, input { min-width: 0; }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { line-height: 1.18; }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid #0080ac; outline-offset: 4px; }
+[hidden] { display: none !important; }
+.icon { width: 24px; height: 24px; flex-shrink: 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip-link { position: fixed; top: -100px; left: 16px; z-index: 100; padding: 12px 20px; background: white; border-radius: 12px; }
+.skip-link:focus { top: 12px; }
+.eyebrow { font-size: 10px; letter-spacing: .15em; font-weight: 800; color: var(--pink); }
+.app-scroll { height: calc(100dvh - var(--dock-height) - env(safe-area-inset-bottom, 0px)); overflow-y: auto; overflow-x: clip; scroll-behavior: smooth; scroll-padding-top: 86px; }
+section, header, main, .families, .catalog-family, footer { scroll-margin-top: 8px; }
+
+/* 2. Portada compacta, con adornos hechos en CSS. */
+.cover { position: relative; max-width: var(--page-width); margin: 0 auto; padding: 18px 28px 20px; background: radial-gradient(ellipse at 6% 80%, #ccf8ff 0, transparent 52%), radial-gradient(ellipse at 90% 5%, #ffdaf0 0, transparent 52%), #fffdfb; border-radius: 0 0 30px 30px; overflow: hidden; }
+.cover::after { content: ''; position: absolute; width: 120px; height: 190px; right: -86px; bottom: -85px; border-radius: 60%; transform: rotate(40deg); background: var(--cyan); opacity: .45; }
+.topline { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 10px; letter-spacing: .11em; font-weight: 800; color: var(--deep); }
+.topline a { min-height: 30px; display: inline-flex; align-items: center; }
+.cover-inner { display: flex; align-items: center; justify-content: center; gap: 32px; position: relative; }
+.brand-logo { width: 180px; height: 168px; object-fit: contain; filter: drop-shadow(0 8px 8px #5b22a819); }
+h1 { font-family: 'Lobster', Georgia, serif; color: var(--pink); font-size: 66px; font-weight: 400; }
+h1 span { display: block; font: 900 24px/1 'Nunito Sans', Arial, sans-serif; color: #0679b2; }
+.tagline { color: var(--deep); font-size: 17px; font-weight: 700; font-style: italic; margin-top: 8px; }
+.cover-spark { color: var(--fuchsia); font-size: 36px; transform: rotate(15deg); margin-left: 24px; }
+
+/* 3. Buscador sticky y panel de navegación por familias. */
+.browse-bar { position: sticky; top: 0; z-index: 30; background: #fff9f5; border-bottom: 1px solid #ebdfef80; }
+.browse-inner { max-width: var(--page-width); margin: auto; padding: 14px 24px; display: flex; gap: 10px; align-items: center; position: relative; }
+.search-box { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; border: 1px solid #d9cbea; border-radius: 16px; background: white; padding: 0 14px; height: 48px; box-shadow: 0 3px 14px #34136e05; color: var(--purple); }
+.search-box:focus-within { border-color: var(--purple); box-shadow: 0 0 0 3px #5b22a811; }
+.search-box input { width: 100%; border: 0; outline: none; background: transparent; color: var(--ink); font-size: 16px; height: 44px; }
+.search-box input::placeholder { color: #82748e; opacity: 1; }
+.search-box input::-webkit-search-cancel-button { display: none; }
+.search-clear { flex-shrink: 0; border: 0; background: none; font-size: 25px; width: 44px; height: 44px; }
+.category-menu summary { list-style: none; min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 8px; color: white; background: var(--purple); border-radius: 15px; padding: 0 16px; font-weight: 800; font-size: 14px; }
+summary::-webkit-details-marker { display: none; }
+.category-menu[open] summary { background: var(--deep); }
+.category-links { position: absolute; top: calc(100% - 5px); left: 24px; right: 24px; max-height: min(65dvh, 620px); overflow-y: auto; overscroll-behavior: contain; padding: 20px; background: #fffdfc; border: 1px solid var(--line); box-shadow: 0 18px 40px #34136e26; border-radius: 20px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.nav-group { min-width: 0; }
+.nav-group a { display: flex; align-items: center; min-height: 44px; font-size: 14px; padding: 7px 8px; border-radius: 9px; overflow-wrap: anywhere; }
+.nav-group .nav-family { color: var(--purple); font-weight: 900; gap: 8px; }
+.nav-group a:hover { background: #f8eaf7; }
+.quick-nav { max-width: var(--page-width); margin: auto; display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); padding: 12px 24px; gap: 10px; }
+.quick-chip { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px; min-height: 56px; border-radius: 17px; color: var(--deep); font-size: 14px; font-weight: 800; background: var(--tile-color); transition: transform .2s, box-shadow .2s; }
+.quick-chip:hover { transform: translateY(-2px); box-shadow: 0 5px 12px #34136e12; }
+.food { --tile-color: #ffe1ae; --tile-strong: #ffb74e; }
+.promos { --tile-color: #ffd9ed; --tile-strong: #fb65b4; }
+.ice { --tile-color: #e8d6ff; --tile-strong: #b881f5; }
+.waffles { --tile-color: #ffdfeb; --tile-strong: #ff97ba; }
+.slush { --tile-color: #c2efff; --tile-strong: #40c8f1; }
+.drinks { --tile-color: #c2f5f1; --tile-strong: #58dfd8; }
+
+/* 4. Mosaico de familias con fotos del proyecto. */
+.families { max-width: var(--page-width); margin: 0 auto; padding: 10px 24px 12px; }
+.block-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.block-heading h2 { font-size: 23px; letter-spacing: -.03em; }
+.block-heading>span { color: var(--pink); font-size: 25px; }
+.family-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.family-card { display: flex; align-items: center; gap: 16px; position: relative; isolation: isolate; min-height: 134px; border-radius: 22px; padding: 14px; overflow: hidden; background: linear-gradient(120deg,var(--tile-color),var(--tile-strong)); border: 1px solid #ffffffc9; box-shadow: 0 5px 14px #34136e08; transition: transform .2s; }
+.family-card::after { content: ''; position: absolute; z-index: -1; width: 110px; height: 110px; border-radius: 50%; background: #ffffff35; right: -32px; top: -46px; }
+.family-card:hover { transform: translateY(-3px); }
+.family-card>img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #ffffffa6; box-shadow: 0 4px 12px #34136e24; }
+.family-copy { min-width: 0; flex: 1; }
+.family-copy h3 { font-size: 21px; font-weight: 900; color: var(--deep); letter-spacing: -.03em; }
+.family-arrow { margin-top: 10px; display: flex; align-items: center; justify-content: center; width: 27px; height: 27px; border-radius: 50%; background: #fffdfcd9; color: var(--purple); }
+.family-arrow .icon { width: 18px; height: 18px; }
+
+/* 5. Ocho familias, secciones originales plegables y accesos secundarios. */
+main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
+.menu-intro { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin: 28px 0 16px; }
+.menu-intro h2 { font-size: 28px; letter-spacing: -.035em; margin-top: 4px; }
+.menu-intro>p { font-size: 13px; color: var(--muted); text-align: right; }
+.catalog-family { margin: 22px 0 30px; }
+.family-heading { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.family-heading h2 { display: flex; align-items: center; gap: 10px; font-size: 24px; color: var(--deep); letter-spacing: -.025em; }
+.family-heading h2>.icon { color: var(--pink); width: 28px; height: 28px; }
+.family-heading>a { min-height: 44px; min-width: 44px; display: grid; place-items: center; font-size: 22px; color: var(--purple); }
+.subcategory-nav { display: flex; flex-wrap: wrap; gap: 5px 8px; padding: 8px 0 14px; }
+.subcategory-nav a { min-height: 44px; display: inline-flex; align-items: center; font-size: 13px; font-weight: 800; color: #685080; padding: 7px 12px; border: 1px solid var(--line); border-radius: 24px; background: white; }
+.subcategory-nav a:hover { border-color: #a582ca; color: var(--purple); }
+.catalog-family:has(.menu-section:only-of-type) .subcategory-nav { display: none; }
+.menu-section { margin: 8px 0; }
+.category-section { border: 1px solid var(--line); border-radius: 17px; background: #ffffffb0; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 66px; padding: 13px 18px; list-style: none; }
+.category-title { display: flex; align-items: baseline; flex-wrap: wrap; gap: 3px 12px; min-width: 0; }
+.section-name { font-size: 17px; font-weight: 900; overflow-wrap: anywhere; }
+.category-count { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.expand-icon { width: 28px; height: 28px; display: grid; place-items: center; flex-shrink: 0; border-radius: 50%; color: var(--purple); background: #f1e9fa; font-size: 20px; line-height: 1; transition: transform .2s; }
+.category-section[open] .expand-icon { transform: rotate(180deg); }
+.category-section[open]>.section-heading { color: var(--purple); }
+.section-content { padding: 0 16px 16px; }
+.catalog-subheading { font-size: 18px; color: var(--deep); margin: 23px 0 14px; }
+.show-all, .reset-search { display: flex; align-items: center; justify-content: center; min-height: 46px; gap: 10px; padding: 10px 22px; margin: 17px auto 0; border: 1px solid #d6bee7; border-radius: 26px; background: #f8f0ff; color: var(--purple); font-weight: 800; font-size: 14px; }
+.show-all:hover, .reset-search:hover { background: #ecddfb; }
+
+/* 6. Cards compactas. Ningún nombre ni precio se recorta. */
+.product-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; }
+.product-card { display: flex; flex-direction: column; min-width: 0; background: white; border: 1px solid #efdfeb; border-radius: 17px; overflow: hidden; box-shadow: 0 5px 16px #34136e07; }
+.product-photo { position: relative; aspect-ratio: 4/3; overflow: hidden; background: #2a0907; }
+.sweet-section .product-photo { background: #160d26; }
+.product-photo img { width: 100%; height: 100%; object-fit: cover; }
+.product-photo:has(img[src$='.svg']) { background: #faf3fc; }
+.product-photo img[src$='.svg'] { object-fit: contain; }
+.product-info { display: flex; flex-direction: column; flex: 1; min-width: 0; padding: 14px; }
+.product-info h3 { color: var(--deep); font-size: 16px; font-weight: 800; line-height: 1.28; overflow-wrap: anywhere; }
+.product-description { font-size: 13px; line-height: 1.45; color: var(--muted); margin: 8px 0 4px; }
+/* El texto completo está disponible mediante Leer más; sin JS queda visible. */
+.js-ready .product-description { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.js-ready .product-description.is-expanded { display: block; }
+.description-toggle { border: 0; background: none; text-align: left; align-self: flex-start; padding: 4px 0; min-height: 44px; font-size: 12px; font-weight: 800; color: var(--purple); }
+.price { font-size: 22px; letter-spacing: -.04em; color: var(--pink); font-weight: 900; margin-top: auto; padding-top: 13px; white-space: nowrap; }
+.price-options { padding: 8px 0 0; margin: auto 0 0; }
+.price-options>div { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: baseline; gap: 0 8px; border-top: 1px solid #f0e8f2; padding: 6px 0 0; margin-top: 5px; }
+.price-options dt { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+.price-options dd { margin: 0 0 0 auto; font-size: 18px; font-weight: 900; color: var(--pink); white-space: nowrap; letter-spacing: -.025em; }
+.promo-label { position: absolute; top: 9px; left: 9px; background: #ffe5a5; border-radius: 20px; color: #643805; font-size: 9px; letter-spacing: .06em; font-weight: 900; padding: 4px 9px; box-shadow: 0 3px 9px #0002; }
+.extras { margin-top: 16px; padding: 16px; border-radius: 14px; background: #f7f1fb; }
+.extras h3 { color: var(--deep); font-size: 16px; }
+.extras dl { margin: 10px 0 0; }
+.extras dl>div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 6px 0; }
+.extras dt { font-size: 13px; color: #645270; }
+.extras dd { font-size: 15px; font-weight: 900; color: var(--purple); margin: 0; white-space: nowrap; }
+.search-status { color: var(--purple); background: #f0e8fa; font-size: 15px; padding: 12px 16px; border-radius: 14px; margin: 14px 0; }
+.search-empty { padding: 40px 20px; text-align: center; background: white; border-radius: 20px; border: 1px solid var(--line); }
+.search-empty>span { font-size: 45px; color: var(--pink); }
+.search-empty h3 { font-size: 22px; margin: 10px 0; }
+.search-empty p { color: var(--muted); }
+.is-searching .cover, .is-searching .quick-nav, .is-searching .families, .is-searching .menu-intro, .is-searching .subcategory-nav { display: none; }
+.is-searching .catalog-family { margin-top: 16px; }
+
+/* 7. Información del local y firma permanente Servimat. */
+.site-footer { background: radial-gradient(ellipse at 0 0,#66399866,transparent 70%),#291345; color: #fff8ff; padding: 44px max(24px,calc((100% - 1112px)/2)) 20px; border-radius: 30px 30px 0 0; }
+.footer-main { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.site-footer .eyebrow { color: #fbb3da; }
+.footer-welcome h2 { font-size: 35px; letter-spacing: -.04em; margin: 12px 0; }
+.footer-welcome>p:not(.eyebrow) { font-size: 21px; color: #e1cfe9; }
+.footer-back { display: inline-flex; align-items: center; gap: 25px; margin-top: 24px; padding: 10px 18px; min-height: 44px; border: 1px solid #8969a1; border-radius: 24px; font-size: 14px; }
+.footer-contact address { font-style: normal; display: flex; flex-direction: column; align-items: flex-start; }
+.footer-contact address>span, .opening-hours>span { display: block; font-size: 10px; font-weight: 800; letter-spacing: .13em; color: #c9afd9; margin: 12px 0 2px; }
+.footer-contact address>a { font-size: 15px; display: flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; max-width: 100%; }
+.footer-contact address>a:hover { text-decoration: underline; }
+.opening-hours { font-size: 15px; }
+.footer-whatsapp { display: flex; align-items: center; gap: 12px; border: 1px solid #69c7ad66; background: #a2efd70d; border-radius: 15px; padding: 10px 14px; margin-top: 20px; max-width: 350px; }
+.footer-whatsapp>span { flex: 1; font-size: 14px; }
+.footer-whatsapp>.icon:last-child { width: 16px; }
+.footer-thanks { text-align: center; padding: 34px 0 26px; }
+.footer-thanks h3 { font-size: 23px; margin-bottom: 7px; }
+.footer-thanks p { color: #dac6e5; font-size: 14px; }
+.footer-bottom { display: flex; justify-content: center; border-top: 1px solid #ffffff20; padding: 20px 0 4px; }
+.servimat-signature { display: flex; flex-direction: column; gap: 1px; color: #4f4956; }
+.signature-label { font-size: 8px; letter-spacing: .13em; font-weight: 700; line-height: 1.4; }
+.signature-brand { display: flex; align-items: center; gap: 7px; }
+.signature-brand img { width: 35px; height: 31px; object-fit: contain; filter: brightness(0); opacity: .7; }
+.signature-brand strong { font-size: 13px; letter-spacing: .1em; font-weight: 900; }
+.signature-brand>.icon { width: 14px; height: 14px; margin-left: 2px; }
+.footer-bottom .servimat-signature { color: #c3b7c9; align-items: center; }
+.footer-bottom .signature-brand img { filter: none; opacity: .7; }
+.footer-bottom .signature-label { font-size: 10px; }
+.footer-bottom .signature-brand strong { font-size: 16px; }
+.footer-bottom .signature-brand img { width: 45px; height: 40px; }
+
+/* 8. Franja inferior reservada: flotación suave sin cubrir fotos ni precios. */
+.utility-dock { position: fixed; bottom: 0; left: 0; right: 0; height: calc(var(--dock-height) + env(safe-area-inset-bottom,0px)); padding: 10px max(24px,calc((100% - 1112px)/2)) calc(10px + env(safe-area-inset-bottom,0px)); display: flex; align-items: center; justify-content: space-between; gap: 14px; background: #fffcfaf2; backdrop-filter: blur(14px); border-top: 1px solid var(--line); z-index: 40; }
+.servimat-floating { opacity: .78; min-height: 44px; justify-content: center; transition: opacity .3s, transform .3s, visibility .3s; }
+.servimat-floating .signature-brand { animation: soft-float 5s ease-in-out infinite; }
+.servimat-floating:hover { opacity: 1; }
+.servimat-floating.is-hidden { opacity: 0; pointer-events: none; transform: translateY(10px); visibility: hidden; }
+.whatsapp-float { display: flex; align-items: center; justify-content: center; gap: 8px; height: 48px; min-width: 48px; padding: 0 17px; border-radius: 28px; background: #117653; color: white; box-shadow: 0 5px 14px #11765329; font-size: 14px; font-weight: 800; }
+.whatsapp-float>.icon { width: 26px; height: 26px; animation: soft-float 5s 1s ease-in-out infinite; }
+@keyframes soft-float { 0%,100% { transform: translateY(1px); } 50% { transform: translateY(-2px); } }
+
+/* 9. Adaptación a tablet y celular, priorizando 390 px. */
+@media (max-width: 1000px) {
+  .product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .category-links { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .family-card { gap: 10px; padding: 10px; min-height: 115px; }
+  .family-card>img { width: 76px; height: 76px; }
+  .family-copy h3 { font-size: 18px; }
+  .quick-chip { flex-direction: column; gap: 3px; font-size: 12px; }
+}
+@media (max-width: 600px) {
+  :root { --dock-height: 68px; }
+  .app-scroll { scroll-padding-top: 74px; }
+  section, header, main, .families, .catalog-family, footer { scroll-margin-top: 8px; }
+  .cover { padding: 8px 16px 12px; border-radius: 0 0 23px 23px; }
+  .topline { font-size: 7.5px; letter-spacing: .055em; }
+  .cover-inner { gap: 14px; justify-content: flex-start; min-height: 134px; }
+  .brand-logo { width: 133px; height: 132px; }
+  h1 { font-size: 43px; }
+  h1 span { font-size: 19px; }
+  .tagline { font-size: 13px; margin-top: 6px; }
+  .cover-spark { position: absolute; right: 1px; top: 1px; font-size: 22px; margin: 0; }
+  .browse-inner { padding: 10px 14px; gap: 8px; }
+  .search-box { height: 46px; padding: 0 10px; gap: 6px; }
+  .search-box>.icon { width: 20px; height: 20px; }
+  .search-box input { font-size: 16px; }
+  .search-clear { width: 32px; }
+  .category-menu summary { min-height: 46px; width: 46px; padding: 0; border-radius: 14px; }
+  .category-menu summary>span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .category-links { position: fixed; top: auto; bottom: calc(var(--dock-height) + env(safe-area-inset-bottom,0px) + 10px); left: 10px; right: 10px; padding: 13px; gap: 13px; max-height: min(65dvh,calc(100dvh - var(--dock-height) - 100px)); }
+  .nav-group a { font-size: 13px; padding: 8px 4px; }
+  .nav-group .nav-family { align-items: flex-start; }
+  .nav-group .icon { width: 19px; height: 19px; }
+  .quick-nav { padding: 4px 14px 10px; display: flex; gap: 7px; overflow-x: auto; scrollbar-width: none; }
+  .quick-nav::-webkit-scrollbar { display: none; }
+  .quick-chip { flex: 1 0 52px; min-width: 52px; max-width: 76px; min-height: 66px; padding: 7px 3px; font-size: 10px; line-height: 1.15; text-align: center; border-radius: 16px; }
+  .quick-chip>.icon { width: 23px; height: 23px; }
+  .families { padding: 6px 14px 0; }
+  .block-heading { margin-bottom: 10px; }
+  .block-heading h2 { font-size: 20px; }
+  .block-heading>span { font-size: 20px; }
+  .family-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+  .family-card { gap: 6px; min-height: 92px; padding: 8px; border-radius: 18px; }
+  .family-card>img { width: 62px; height: 62px; border-width: 2px; }
+  .family-copy h3 { font-size: 14px; letter-spacing: -.035em; overflow-wrap: normal; }
+  .family-arrow { width: 22px; height: 22px; margin-top: 6px; }
+  .family-arrow .icon { width: 15px; height: 15px; }
+  main { padding: 0 14px 24px; }
+  .menu-intro { gap: 12px; margin: 22px 0 8px; }
+  .menu-intro h2 { font-size: 22px; }
+  .menu-intro .eyebrow { font-size: 8px; }
+  .menu-intro>p { max-width: 114px; font-size: 11px; }
+  .catalog-family { margin: 14px 0 24px; }
+  .family-heading h2 { font-size: 21px; gap: 8px; }
+  .family-heading h2>.icon { width: 23px; height: 23px; }
+  .subcategory-nav { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding: 4px 0 10px; gap: 6px; }
+  .subcategory-nav a { flex-shrink: 0; font-size: 12px; min-height: 44px; }
+  .category-title { gap: 2px 9px; }
+  .section-heading { padding: 12px; min-height: 61px; gap: 8px; }
+  .section-name { font-size: 16px; }
+  .category-count { font-size: 11px; }
+  .section-content { padding: 0 8px 10px; }
+  .category-section[open] { background: #fff5fb; border-color: #e7d3ec; }
+  .product-grid { gap: 8px; }
+  .product-card { border-radius: 15px; }
+  .product-info { padding: 11px 10px 12px; }
+  .product-info h3 { font-size: 14px; }
+  .product-description { font-size: 12.5px; line-height: 1.4; }
+  .price { font-size: 21px; padding-top: 10px; }
+  .price-options dd { font-size: 17px; }
+  .price-options dt { font-size: 11.5px; }
+  .product-card.wide-card { grid-column: 1 / -1; display: grid; grid-template-columns: 36% minmax(0,1fr); }
+  .wide-card .product-photo { height: 100%; min-height: 155px; aspect-ratio: auto; }
+  .wide-card .product-photo img { object-fit: contain; }
+  .wide-card .product-info h3 { font-size: 15px; }
+  .extras { padding: 13px; }
+  .extras dl>div { gap: 9px; }
+  .site-footer { padding: 30px 22px 20px; }
+  .footer-main { grid-template-columns: minmax(0,1fr); gap: 24px; }
+  .footer-welcome h2 { font-size: 30px; }
+  .footer-welcome>p:not(.eyebrow) { font-size: 18px; }
+  .footer-contact address>a { font-size: 14px; }
+  .footer-thanks { padding: 28px 0; }
+  .utility-dock { padding: 9px 17px calc(9px + env(safe-area-inset-bottom,0px)); }
+  .signature-label { font-size: 7px; letter-spacing: .1em; }
+  .signature-brand strong { font-size: 12px; }
+  .signature-brand img { width: 31px; height: 27px; }
+  .whatsapp-float { padding: 0; width: 48px; }
+  .whatsapp-float>span { display: none; }
+}
+@media (max-width: 359px) {
+  .brand-logo { width: 110px; height: 122px; }
+  h1 { font-size: 38px; }
+  .family-card>img { width: 49px; height: 49px; }
+  .family-copy h3 { font-size: 14px; }
+  .product-grid { grid-template-columns: minmax(0,1fr); }
+  .product-card.wide-card { display: flex; }
+  .wide-card .product-photo { aspect-ratio: 4/3; }
+}
+/* 10. Movimiento reducido e impresión completa, incluso con categorías cerradas. */
+@media (prefers-reduced-motion: reduce) {
+  .app-scroll { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+@media print {
+  .app-scroll { height: auto; overflow: visible; }
+  .utility-dock, .browse-bar, .quick-nav, .families, .subcategory-nav, .show-all, .description-toggle { display: none; }
+  .category-section::details-content { content-visibility: visible; }
+  .product-card { break-inside: avoid; }
+  .product-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .js-ready .product-description { display: block; }
+}

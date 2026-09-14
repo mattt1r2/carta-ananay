@@ -3,6 +3,7 @@
 !/.gitignore
 !/index.html
 !/style.css
+!/script.js
 !/assets/
 /importar-productos (9).xlsx
 *.xlsx
