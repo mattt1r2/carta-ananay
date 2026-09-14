@@ -1,0 +1,13 @@
+# Solo publicar los archivos de la carta.
+/*
+!/.gitignore
+!/index.html
+!/style.css
+!/assets/
+/importar-productos (9).xlsx
+*.xlsx
+*.xls
+*.zip
+*.log
+__pycache__/
+.env*
