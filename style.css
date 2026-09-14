@@ -64,6 +64,7 @@ h2{font-family:'Cinzel',Georgia,serif;font-size:clamp(28px,3.1vw,43px);font-weig
 .extras dl{margin:0;flex:1}.extras dl>div{display:flex;justify-content:space-between;gap:25px;padding:6px 0}.extras dt{font-size:.86rem;color:var(--muted)}.extras dd{margin:0;font-weight:600;color:var(--gold-light);white-space:nowrap}
 
 /* 5. Promociones y universo dulce */
+.catalog-subheading{font-family:'Cinzel',Georgia,serif;color:var(--gold-light);font-size:1.3rem;font-weight:500;margin:38px 0 22px;line-height:1.4;overflow-wrap:anywhere}
 .promo-card{border-color:#bd8b38;box-shadow:0 0 0 3px #d6a63a08,0 12px 30px #10000030}
 .promo-label{position:absolute;top:14px;left:14px;background:var(--gold-light);color:#2a0907;font-size:.63rem;font-weight:700;letter-spacing:.13em;padding:4px 10px;border-radius:2px}
 .sweet-section{background:radial-gradient(ellipse at 0 0,#5b22a838,transparent 50%),radial-gradient(ellipse at 100% 65%,#f52f9a10,transparent 45%),#160d26;border-bottom-color:#764b9b55}
