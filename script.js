@@ -66,7 +66,14 @@
       section.more = button;
     }
     section.cards.forEach(card => {
-      if (card.querySelector('h3').textContent.length > 72) card.classList.add('wide-card');
+      // El fondo acompaña al retrato sin adelantar la carga diferida de la foto.
+      for (const photo of card.querySelectorAll('.photo-portrait')) {
+        const image = photo.querySelector('img');
+        if (!image) continue;
+        const setBackdrop = () => photo.style.setProperty('--photo-backdrop', `url("${image.currentSrc || image.src}")`);
+        if (image.complete && image.naturalWidth) setBackdrop();
+        else image.addEventListener('load', setBackdrop, { once: true });
+      }
       const description = card.querySelector('.product-description');
       if (!description) return;
       const button = document.createElement('button');

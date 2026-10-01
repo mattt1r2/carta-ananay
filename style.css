@@ -135,15 +135,15 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
 .show-all:hover, .reset-search:hover { background: #ecddfb; }
 
 /* 6. Cards compactas. Ningún nombre ni precio se recorta. */
-/* Cada tarjeta conserva su altura natural aunque la foto vecina sea vertical. */
-.product-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; align-items: start; }
+/* Fotos uniformes y tarjetas alineadas por fila, sin formatos según el nombre. */
+.product-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; align-items: stretch; }
 .product-card { display: flex; flex-direction: column; min-width: 0; background: white; border: 1px solid #eddfeb; border-radius: 18px; overflow: hidden; box-shadow: 0 6px 18px #34136e0b; }
-.product-photo { position: relative; aspect-ratio: 4/3; overflow: hidden; background: #f6f0eb; flex-shrink: 0; }
+.product-photo { position: relative; aspect-ratio: 1; overflow: hidden; background: #f6f0eb; flex-shrink: 0; isolation: isolate; }
 .sweet-section .product-photo { background: #f8f1fb; }
-.product-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
-/* Marcos adaptados a retratos: la foto llena el espacio sin franjas oscuras. */
-.product-photo.photo-portrait { aspect-ratio: 3/4; }
-.product-photo.photo-square { aspect-ratio: 1; }
+.product-photo img { position: relative; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+/* El retrato se muestra entero sobre un fondo suave de la misma fotografía. */
+.product-photo.photo-portrait::before { content: ''; position: absolute; inset: -18px; background: var(--photo-backdrop) center / cover no-repeat; filter: blur(18px); opacity: .45; }
+.product-photo.photo-portrait img { object-fit: contain; }
 .photo-reference { position: absolute; bottom: 7px; left: 7px; padding: 3px 7px; border-radius: 6px; background: #ffffffed; color: #51445e; font-size: 10px; line-height: 1.4; }
 .product-photo:has(img[src$='.svg']) { background: #faf3fc; }
 .product-photo img[src$='.svg'] { object-fit: contain; }
@@ -167,6 +167,14 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
 .price-options dt { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
 .price-options dd { margin: 0 0 0 auto; font-size: 18px; font-weight: 900; color: var(--pink); white-space: nowrap; letter-spacing: -.025em; }
 .promo-label { position: absolute; top: 9px; left: 9px; background: #ffe5a5; border-radius: 20px; color: #643805; font-size: 9px; letter-spacing: .06em; font-weight: 900; padding: 4px 9px; box-shadow: 0 3px 9px #0002; }
+/* Promociones: una composición estable para todos los nombres, incluso largos. */
+#familia-promos .product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+.promo-card { display: grid; grid-template-columns: clamp(104px,30%,152px) minmax(0,1fr); gap: 14px; padding: 12px; }
+.promo-card .product-photo { width: 100%; align-self: start; border-radius: 12px; }
+.promo-card .product-info { padding: 2px 0; }
+.promo-card .product-info h3 { font-size: 15px; line-height: 1.35; }
+.promo-card .price { padding-top: 10px; }
+.promo-card .promo-label { top: 6px; left: 6px; font-size: 8px; padding: 3px 7px; }
 .extras { margin-top: 16px; padding: 16px; border-radius: 14px; background: #f7f1fb; }
 .extras h3 { color: var(--deep); font-size: 16px; }
 .extras dl { margin: 10px 0 0; }
@@ -294,12 +302,9 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
   .price { font-size: 21px; padding-top: 10px; }
   .price-options dd { font-size: 17px; }
   .price-options dt { font-size: 11.5px; }
-  .product-card.wide-card { grid-column: 1 / -1; display: grid; grid-template-columns: 36% minmax(0,1fr); }
-  .wide-card .product-photo { height: auto; min-height: 0; aspect-ratio: 4/3; align-self: start; }
-  .wide-card .product-photo.photo-portrait { aspect-ratio: 3/4; }
-  .wide-card .product-photo.photo-square { aspect-ratio: 1; }
-  .wide-card .product-photo img { object-fit: cover; }
-  .wide-card .product-info h3 { font-size: 15px; }
+  .promo-card { grid-template-columns: 30% minmax(0,1fr); gap: 12px; padding: 10px; }
+  .promo-card .product-info { padding: 0; }
+  .promo-card .product-info h3 { font-size: 14px; }
   .extras { padding: 13px; }
   .extras dl>div { gap: 9px; }
   .site-footer { padding: 30px 22px 20px; }
@@ -313,6 +318,9 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
   .signature-brand img { width: 31px; height: 27px; }
 }
 /* Ajuste de compatibilidad para etiquetas completas en 320–375 px. */
+@media (max-width: 767px) {
+  #familia-promos .product-grid { grid-template-columns: minmax(0,1fr); }
+}
 @media (max-width: 389px) {
   .family-card>img { width: 56px; height: 56px; }
   .family-copy h3 { font-size: 13px; }
@@ -326,8 +334,6 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
   .family-card>img { width: 40px; height: 40px; }
   .family-copy h3 { font-size: 12px; }
   .product-grid { grid-template-columns: minmax(0,1fr); }
-  .product-card.wide-card { display: flex; }
-  .wide-card .product-photo { aspect-ratio: 4/3; }
 }
 /* 10. Movimiento reducido e impresión completa, incluso con categorías cerradas. */
 @media (prefers-reduced-motion: reduce) {
