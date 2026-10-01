@@ -51,6 +51,17 @@ h1 span { display: block; font: 900 24px/1 'Nunito Sans', Arial, sans-serif; col
 .tagline { color: var(--deep); font-size: 17px; font-weight: 700; font-style: italic; margin-top: 8px; }
 .cover-spark { color: var(--fuchsia); font-size: 36px; transform: rotate(15deg); margin-left: 24px; }
 
+/* Instagram del local: acceso visible, compacto y fácil de tocar. */
+.cover-social { display: flex; justify-content: center; position: relative; z-index: 1; margin-top: 16px; }
+.instagram-link { display: inline-flex; align-items: center; justify-content: center; gap: 12px; max-width: 100%; min-height: 48px; padding: 10px 18px; border: 1px solid #e9c6e3; border-radius: 18px; background: #ffffffc9; color: var(--deep); box-shadow: 0 5px 18px #a0246910; }
+.instagram-link>.icon { color: var(--pink); width: 25px; height: 25px; }
+.instagram-link>span:not(.instagram-arrow) { font-size: 12px; line-height: 1.4; }
+.instagram-link strong { display: block; font-size: 14px; font-weight: 900; color: var(--pink); overflow-wrap: anywhere; }
+.instagram-arrow { font-size: 22px; color: var(--pink); }
+.instagram-link:hover { background: #fff; border-color: #c61072; }
+.instagram-contact { gap: 10px; }
+.instagram-contact .icon { width: 20px; height: 20px; }
+
 /* 3. Buscador sticky y panel de navegación por familias. */
 .browse-bar { position: sticky; top: var(--safe-top); z-index: 30; background: #fff9f5; border-bottom: 1px solid #ebdfef80; }
 .browse-inner { max-width: var(--page-width); margin: auto; padding: 14px 24px; display: flex; gap: 10px; align-items: center; position: relative; }
@@ -109,7 +120,7 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
 .subcategory-nav a:hover { border-color: #a582ca; color: var(--purple); }
 .catalog-family:has(.menu-section:only-of-type) .subcategory-nav { display: none; }
 .menu-section { margin: 8px 0; }
-.category-section { border: 1px solid var(--line); border-radius: 17px; background: #ffffffb0; }
+.category-section { border: 1px solid var(--line); border-radius: 20px; background: #ffffffc9; box-shadow: 0 6px 24px #34136e04; }
 .section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 66px; padding: 13px 18px; list-style: none; }
 .category-title { display: flex; align-items: baseline; flex-wrap: wrap; gap: 3px 12px; min-width: 0; }
 .section-name { font-size: 17px; font-weight: 900; overflow-wrap: anywhere; }
@@ -125,10 +136,14 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
 
 /* 6. Cards compactas. Ningún nombre ni precio se recorta. */
 .product-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; }
-.product-card { display: flex; flex-direction: column; min-width: 0; background: white; border: 1px solid #efdfeb; border-radius: 17px; overflow: hidden; box-shadow: 0 5px 16px #34136e07; }
-.product-photo { position: relative; aspect-ratio: 4/3; overflow: hidden; background: #2a0907; }
-.sweet-section .product-photo { background: #160d26; }
-.product-photo img { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+.product-card { display: flex; flex-direction: column; min-width: 0; background: white; border: 1px solid #eddfeb; border-radius: 18px; overflow: hidden; box-shadow: 0 6px 18px #34136e0b; }
+.product-photo { position: relative; aspect-ratio: 4/3; overflow: hidden; background: #f6f0eb; flex-shrink: 0; }
+.sweet-section .product-photo { background: #f8f1fb; }
+.product-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+/* Marcos adaptados a retratos: la foto llena el espacio sin franjas oscuras. */
+.product-photo.photo-portrait { aspect-ratio: 3/4; }
+.product-photo.photo-square { aspect-ratio: 1; }
+.photo-reference { position: absolute; bottom: 7px; left: 7px; padding: 3px 7px; border-radius: 6px; background: #ffffffed; color: #51445e; font-size: 10px; line-height: 1.4; }
 .product-photo:has(img[src$='.svg']) { background: #faf3fc; }
 .product-photo img[src$='.svg'] { object-fit: contain; }
 
@@ -279,8 +294,10 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
   .price-options dd { font-size: 17px; }
   .price-options dt { font-size: 11.5px; }
   .product-card.wide-card { grid-column: 1 / -1; display: grid; grid-template-columns: 36% minmax(0,1fr); }
-  .wide-card .product-photo { height: 100%; min-height: 155px; aspect-ratio: auto; }
-  .wide-card .product-photo img { object-fit: contain; }
+  .wide-card .product-photo { height: auto; min-height: 0; aspect-ratio: 4/3; align-self: start; }
+  .wide-card .product-photo.photo-portrait { aspect-ratio: 3/4; }
+  .wide-card .product-photo.photo-square { aspect-ratio: 1; }
+  .wide-card .product-photo img { object-fit: cover; }
   .wide-card .product-info h3 { font-size: 15px; }
   .extras { padding: 13px; }
   .extras dl>div { gap: 9px; }

@@ -1,0 +1,71 @@
+{
+  "note": "Fotografías de referencia. No representan fotografías tomadas en Ananay.",
+  "photographs": [
+    {
+      "file": "assets/productos/actualizacion/helado-simple.webp",
+      "author": "K Zoltan",
+      "source": "https://www.pexels.com/photo/hand-holding-an-ice-cream-cone-12383231/",
+      "license": "https://www.pexels.com/license/",
+      "dimensions": [
+        800,
+        1200
+      ],
+      "reference": true
+    },
+    {
+      "file": "assets/productos/actualizacion/helado-doble.webp",
+      "author": "ROMAN ODINTSOV",
+      "source": "https://www.pexels.com/photo/two-scoops-of-ice-cream-5060295/",
+      "license": "https://www.pexels.com/license/",
+      "dimensions": [
+        800,
+        1200
+      ],
+      "reference": true
+    },
+    {
+      "file": "assets/productos/actualizacion/helado-triple.webp",
+      "author": "Ali Dashti",
+      "source": "https://www.pexels.com/photo/hand-of-a-woman-holding-an-ice-cream-cone-with-sugar-sprinkles-22809635/",
+      "license": "https://www.pexels.com/license/",
+      "dimensions": [
+        960,
+        1200
+      ],
+      "reference": true
+    },
+    {
+      "file": "assets/productos/actualizacion/helado-soft.webp",
+      "author": "Somben Chea",
+      "source": "https://www.pexels.com/photo/cream-ice-cream-in-cone-1294943/",
+      "license": "https://www.pexels.com/license/",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "reference": true
+    },
+    {
+      "file": "assets/productos/actualizacion/dulces-surtidos.webp",
+      "author": "Elizabeth Iris",
+      "source": "https://www.pexels.com/photo/close-up-shot-of-gummy-candies-7619904/",
+      "license": "https://www.pexels.com/license/",
+      "dimensions": [
+        1000,
+        667
+      ],
+      "reference": true
+    },
+    {
+      "file": "assets/productos/actualizacion/soft-frutal.webp",
+      "author": "Shameel mukkath",
+      "source": "https://www.pexels.com/photo/a-small-cup-of-ice-cream-with-strawberries-and-whipped-cream-17321380/",
+      "license": "https://www.pexels.com/license/",
+      "dimensions": [
+        871,
+        1200
+      ],
+      "reference": true
+    }
+  ]
+}
