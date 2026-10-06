@@ -517,6 +517,15 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
   .family-arrow { width: 42px; height: 29px; margin-top: 9px; }
 }
 
+/* Productos sin fotografía: tarjetas compactas, sin reservar un espacio de imagen. */
+.product-grid-text { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 1000px) {
+  .product-grid-text { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .product-grid-text { grid-template-columns: minmax(0, 1fr); }
+}
+
 /* 12. Movimiento reducido e impresión completa, incluso con categorías cerradas. */
 @media (prefers-reduced-motion: reduce) {
   .app-scroll { scroll-behavior: auto; }
