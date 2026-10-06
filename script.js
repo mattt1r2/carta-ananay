@@ -40,7 +40,7 @@
       heading.hidden = next?.classList.contains('product-grid') ? next.hidden : false;
     }
     for (const extras of section.content.querySelectorAll('.extras')) {
-      extras.hidden = isSearching || (section.cards.length > 4 && !section.expanded);
+      extras.hidden = isSearching;
     }
   }
   function renderPreview(section) {
