@@ -7,8 +7,8 @@
   <meta name="theme-color" content="#34136E">
   <title>Heladería Ananay | Carta</title>
   <link rel="icon" href="assets/img/logo-ananay.png" type="image/png">
-  <link rel="stylesheet" href="style.css?v=20261001-aligned">
-  <script src="script.js?v=20261001-aligned" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261006-visual">
+  <script src="script.js?v=20261006-visual" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#carta">Saltar a la carta</a>
@@ -20,20 +20,49 @@
     <div class="cover-inner">
       <img class="brand-logo" src="assets/img/logo-ananay-color.png" width="1254" height="1254" alt="Logo de Heladería Ananay" fetchpriority="high">
       <div class="cover-copy"><h1><span>Heladería</span> Ananay</h1><p class="tagline">Más que un antojo,<br>una sonrisa.</p></div>
-      <span class="cover-spark" aria-hidden="true">✦</span>
+      <div class="cover-showcase" aria-hidden="true">
+        <img class="showcase-food" src="assets/productos/hamburguesas/hamburguesa-italiana.webp" alt="" width="900" height="1200" decoding="async">
+        <img class="showcase-sweet" src="assets/productos/wafles/wafle-con-helado-artesanal-3-sabores-a-eleccion.webp" alt="" width="900" height="1200" decoding="async">
+        <span class="showcase-note">Un antojo.<br>Mil sonrisas. <span>✦</span></span>
+      </div>
     </div>
-    <!-- Instagram oficial de Ananay, visible desde la portada. -->
-    <div class="cover-social"><a class="instagram-link" href="https://www.instagram.com/ananay.chile2026/" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg><span>Síguenos en Instagram <strong>@ananay.chile2026</strong></span><span class="instagram-arrow" aria-hidden="true">↗</span></a></div>
+    <!-- Redes oficiales, visibles desde la portada. -->
+    <div class="cover-social" aria-label="Redes sociales de Ananay">
+      <a class="social-link instagram-link" href="https://www.instagram.com/ananay.chile2026/" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg><span>Instagram</span><span aria-hidden="true">↗</span></a>
+      <a class="social-link facebook-link" href="https://www.facebook.com/ananay.chile2026" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 22v-9h3l.5-4H14V6.5c0-1.2.4-2 2-2h2V1.2A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9Z"/></svg><span>Facebook</span><span aria-hidden="true">↗</span></a>
+    </div>
   </header>
 
   <!-- Búsqueda local y navegación por las ocho familias. -->
   <div class="browse-bar"><div class="browse-inner">
     <div class="search-box" role="search"><label class="sr-only" for="menu-search">Buscar en la carta</label><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="menu-search" type="search" placeholder="¿Qué se te antoja hoy?" autocomplete="off" maxlength="100" aria-controls="carta"><button class="search-clear" type="button" aria-label="Limpiar búsqueda" hidden><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
     <details class="category-menu"><summary aria-label="Categorías"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg><span>Categorías</span></summary><nav class="category-links" aria-label="Todas las categorías"><div class="nav-group"><a class="nav-family" href="#familia-helados"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 13 5 9 5-9M6 13h12a3 3 0 0 0 1-5 7 7 0 0 0-14 0 3 3 0 0 0 1 5Z"/></svg>Helados y postres</a><div><a href="#postres">Postres</a><a href="#helados">Especialidades en helado</a><a href="#helados-divertidos">Helados divertidos</a></div></div><div class="nav-group"><a class="nav-family" href="#familia-promos"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 6.3L21 12l-6.3 2.7L12 21l-2.7-6.3L3 12l6.3-2.7Z"/></svg>Promociones</a><div><a href="#promociones">Menú Promos</a><a href="#combos">Combos</a><a href="#para-compartir">Para compartir</a><a href="#promo-pizza">Promo Pizza</a></div></div><div class="nav-group"><a class="nav-family" href="#familia-comida"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16M3 14h18M5 18h14M5 10a7 7 0 0 1 14 0M4 18v2h16v-2"/><path d="m8 13 4 3 4-3"/></svg>Comida rápida</a><div><a href="#desayunos">Desayunos</a><a href="#completos">Completos</a><a href="#papas">Papas</a><a href="#papas-de-la-casa">Papas de la casa</a><a href="#churrascos">Churrascos</a><a href="#hamburguesas">Hamburguesas</a><a href="#fajitas">Fajitas</a><a href="#snacks">Snacks</a></div></div><div class="nav-group"><a class="nav-family" href="#familia-pizzas"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 5 7 17L21 7A22 22 0 0 0 4 5ZM5 8a19 19 0 0 1 14 2M11 11h.01M12 16h.01M15 12h.01"/></svg>Pizzas</a><div><a href="#pizzas">Pizzas familiares</a></div></div><div class="nav-group"><a class="nav-family" href="#familia-wafles"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>Wafles</a><div><a href="#wafles">Wafles</a></div></div><div class="nav-group"><a class="nav-family" href="#familia-granizados"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 8 2 13h8l2-13ZM5 8h14M12 8l2-6h4"/></svg>Granizados</a><div><a href="#granizados">Granizados</a></div></div><div class="nav-group"><a class="nav-family" href="#familia-frutales"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7C1 1 1 15 8 21c2 1 2-1 4-1s2 2 4 1C23 15 23 1 12 7ZM12 7c0-4 3-5 5-5"/></svg>Frutales</a><div><a href="#vasos-y-frutillas">Vasos irresistibles y frutillas</a><a href="#frutales">Snacks frutales</a></div></div><div class="nav-group"><a class="nav-family" href="#familia-bebidas"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h13v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4ZM17 8h2a3 3 0 1 1 0 6h-2M8 2v2M13 2v2"/></svg>Bebidas</a><div><a href="#bebestibles">Bebestibles</a><a href="#bebidas-frias">Bebidas frías</a></div></div></nav></details>
-  </div></div>
-  <nav class="quick-nav" aria-label="Categorías rápidas"><a href="#familia-promos" class="quick-chip promos"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 6.3L21 12l-6.3 2.7L12 21l-2.7-6.3L3 12l6.3-2.7Z"/></svg><span>Promos</span></a><a href="#familia-comida" class="quick-chip food"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16M3 14h18M5 18h14M5 10a7 7 0 0 1 14 0M4 18v2h16v-2"/><path d="m8 13 4 3 4-3"/></svg><span>Comida rápida</span></a><a href="#familia-helados" class="quick-chip ice"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 13 5 9 5-9M6 13h12a3 3 0 0 0 1-5 7 7 0 0 0-14 0 3 3 0 0 0 1 5Z"/></svg><span>Helados</span></a><a href="#familia-wafles" class="quick-chip waffles"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg><span>Wafles</span></a><a href="#familia-granizados" class="quick-chip slush"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 8 2 13h8l2-13ZM5 8h14M12 8l2-6h4"/></svg><span>Granizados</span></a><a href="#familia-bebidas" class="quick-chip drinks"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h13v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4ZM17 8h2a3 3 0 1 1 0 6h-2M8 2v2M13 2v2"/></svg><span>Bebidas</span></a></nav>
+  </div>
+  <nav class="quick-nav" aria-label="Categorías rápidas">
+    <a href="#familia-helados" class="quick-chip ice"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 13 5 9 5-9M6 13h12a3 3 0 0 0 1-5 7 7 0 0 0-14 0 3 3 0 0 0 1 5Z"/></svg><span>Helados</span></a>
+    <a href="#familia-promos" class="quick-chip promos"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 6.3L21 12l-6.3 2.7L12 21l-2.7-6.3L3 12l6.3-2.7Z"/></svg><span>Promos</span></a>
+    <a href="#familia-comida" class="quick-chip food"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16M3 14h18M5 18h14M5 10a7 7 0 0 1 14 0M4 18v2h16v-2"/><path d="m8 13 4 3 4-3"/></svg><span>Comida rápida</span></a>
+    <a href="#familia-pizzas" class="quick-chip pizza"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 5 7 17L21 7A22 22 0 0 0 4 5ZM5 8a19 19 0 0 1 14 2M11 11h.01M12 16h.01M15 12h.01"/></svg><span>Pizzas</span></a>
+    <a href="#familia-wafles" class="quick-chip waffles"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg><span>Wafles</span></a>
+    <a href="#familia-granizados" class="quick-chip slush"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 8 2 13h8l2-13ZM5 8h14M12 8l2-6h4"/></svg><span>Granizados</span></a>
+    <a href="#familia-frutales" class="quick-chip fruit"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7C1 1 1 15 8 21c2 1 2-1 4-1s2 2 4 1C23 15 23 1 12 7ZM12 7c0-4 3-5 5-5"/></svg><span>Frutales</span></a>
+    <a href="#familia-bebidas" class="quick-chip drinks"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h13v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4ZM17 8h2a3 3 0 1 1 0 6h-2M8 2v2M13 2v2"/></svg><span>Bebidas</span></a>
+</nav>
+  </div>
   <!-- Mosaico con fotografías ya existentes del catálogo. -->
-  <div id="familias" class="families"><div class="block-heading"><h2>¿Cuál es tu antojo?</h2><span aria-hidden="true">✦</span></div><div class="family-grid"><a class="family-card food" href="#familia-comida"><img src="assets/img/hamburguesas-hamburguesa-italiana.jpg" alt="" width="640" height="480" loading="lazy" decoding="async"><div class="family-copy"><h3>Comida rápida</h3><span class="family-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></span></div></a><a class="family-card promos" href="#familia-promos"><img src="assets/img/combos-completo-normal.jpg" alt="" width="640" height="480" loading="lazy" decoding="async"><div class="family-copy"><h3>Promociones</h3><span class="family-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></span></div></a><a class="family-card ice" href="#familia-helados"><img src="assets/img/copa-corazon.jpg" alt="" width="640" height="480" loading="lazy" decoding="async"><div class="family-copy"><h3>Helados</h3><span class="family-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></span></div></a><a class="family-card waffles" href="#familia-wafles"><img src="assets/img/wafle-con-helado-artesanal.jpg" alt="" width="640" height="480" loading="lazy" decoding="async"><div class="family-copy"><h3>Wafles</h3><span class="family-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></span></div></a><a class="family-card slush" href="#familia-granizados"><img src="assets/img/granizados-con-gomitas.jpg" alt="" width="640" height="480" loading="lazy" decoding="async"><div class="family-copy"><h3>Granizados</h3><span class="family-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></span></div></a><a class="family-card drinks" href="#familia-bebidas"><img src="assets/img/milkshake.jpg" alt="" width="640" height="480" loading="lazy" decoding="async"><div class="family-copy"><h3>Bebidas</h3><span class="family-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></span></div></a></div></div>
+  <div id="familias" class="families">
+    <div class="block-heading"><div><p class="eyebrow">AQUÍ EMPIEZA TU ANTOJO</p><h2>¿Dulce o salado?</h2></div><span aria-hidden="true">✦</span></div>
+    <div class="family-grid">
+      <a class="family-card ice" href="#familia-helados"><img src="assets/img/carta-2026/helado-doble.webp" alt="" width="960" height="960" loading="lazy" decoding="async"><div class="family-copy"><h3>Helados</h3><p>Copas, conos y postres</p><span class="family-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></span></div></a>
+      <a class="family-card promos" href="#familia-promos"><img src="assets/img/carta-2026/completo-normal.webp" alt="" width="960" height="960" loading="lazy" decoding="async"><div class="family-copy"><h3>Promociones</h3><p>Para disfrutar juntos</p><span class="family-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></span></div></a>
+      <a class="family-card food" href="#familia-comida"><img src="assets/productos/hamburguesas/hamburguesa-italiana.webp" alt="" width="960" height="960" loading="lazy" decoding="async"><div class="family-copy"><h3>Comida rápida</h3><p>Completos, burgers y más</p><span class="family-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></span></div></a>
+      <a class="family-card pizza" href="#familia-pizzas"><img src="assets/img/carta-2026/pizza-napolitana.webp" alt="" width="960" height="960" loading="lazy" decoding="async"><div class="family-copy"><h3>Pizzas</h3><p>Tu porción de felicidad</p><span class="family-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></span></div></a>
+      <a class="family-card waffles" href="#familia-wafles"><img src="assets/productos/wafles/wafle-con-helado-artesanal-3-sabores-a-eleccion.webp" alt="" width="960" height="960" loading="lazy" decoding="async"><div class="family-copy"><h3>Wafles</h3><p>El lado dulce del día</p><span class="family-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></span></div></a>
+      <a class="family-card slush" href="#familia-granizados"><img src="assets/productos/granizados/locura-ananay-granizado-1-litro.webp" alt="" width="960" height="960" loading="lazy" decoding="async"><div class="family-copy"><h3>Granizados</h3><p>Frescura que enamora</p><span class="family-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></span></div></a>
+      <a class="family-card fruit" href="#familia-frutales"><img src="assets/productos/frutillas/fresas-con-crema-especial-fresas-extra-bowl.webp" alt="" width="960" height="960" loading="lazy" decoding="async"><div class="family-copy"><h3>Frutales</h3><p>Fruta y algo más</p><span class="family-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></span></div></a>
+      <a class="family-card drinks" href="#familia-bebidas"><img src="assets/img/carta-2026/milkshake.webp" alt="" width="960" height="960" loading="lazy" decoding="async"><div class="family-copy"><h3>Bebidas</h3><p>Acompaña tu favorito</p><span class="family-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></span></div></a>
+    </div>
+  </div>
   <main id="carta">
     <div class="menu-intro"><div><p class="eyebrow">PARA DISFRUTAR AQUÍ</p><h2>Tu próximo favorito</h2></div><p>Elige y pídeselo<br>a nuestro camarero.</p></div>
     <p class="search-status" role="status" aria-live="polite" aria-atomic="true" hidden></p>
@@ -46,70 +75,70 @@
         <div class="section-content" id="content-postres">
       <div class="product-grid">
 <article data-fudo-ids="156" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/copa-soft.jpg" alt="Copa soft" loading="lazy" decoding="async" width="326" height="330"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/copa-soft.webp" alt="Copa soft" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Copa soft</h3>
             <p class="product-description">Helado soft y salsa de chocolate.</p>
             <p class="price" data-fudo-id="156">$2.490</p>
           </div>
         </article>
 <article data-fudo-ids="157" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/copa-simple.jpg" alt="Copa simple — 1 sabor a elección" loading="lazy" decoding="async" width="326" height="330"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/copa-simple.webp" alt="Copa simple — 1 sabor a elección" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Copa simple — 1 sabor a elección</h3>
             <p class="product-description">Un sabor de helado, crema y salsa de chocolate.</p>
             <p class="price" data-fudo-id="157">$2.990</p>
           </div>
         </article>
 <article data-fudo-ids="158" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/copa-soft-ananay.jpg" alt="Copa soft Ananay" loading="lazy" decoding="async" width="326" height="330"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/copa-soft-ananay.webp" alt="Copa soft Ananay" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Copa soft Ananay</h3>
             <p class="product-description">Helado soft, crema, topping y salsa de chocolate.</p>
             <p class="price" data-fudo-id="158">$3.490</p>
           </div>
         </article>
 <article data-fudo-ids="159" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/copa-ninos.jpg" alt="Copa niños — 1 sabor a elección" loading="lazy" decoding="async" width="326" height="330"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/copa-ninos.webp" alt="Copa niños — 1 sabor a elección" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Copa niños — 1 sabor a elección</h3>
             <p class="product-description">Un sabor de helado, crema, salsa de chocolate y topping.</p>
             <p class="price" data-fudo-id="159">$3.490</p>
           </div>
         </article>
 <article data-fudo-ids="160" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/copa-duo.jpg" alt="Copa dúo — 2 sabores a elección" loading="lazy" decoding="async" width="326" height="330"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/copa-duo.webp" alt="Copa dúo — 2 sabores a elección" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Copa dúo — 2 sabores a elección</h3>
             <p class="product-description">2 sabores de helado, crema y salsa de chocolate.</p>
             <p class="price" data-fudo-id="160">$4.890</p>
           </div>
         </article>
 <article data-fudo-ids="161" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/copa-trio.jpg" alt="Copa trío — 3 sabores a elección" loading="lazy" decoding="async" width="326" height="330"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/copa-trio.webp" alt="Copa trío — 3 sabores a elección" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Copa trío — 3 sabores a elección</h3>
             <p class="product-description">3 sabores de helado, crema y salsa de chocolate.</p>
             <p class="price" data-fudo-id="161">$6.390</p>
           </div>
         </article>
 <article data-fudo-ids="162" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/4-estaciones.jpg" alt="4 estaciones — 2 sabores a elección" loading="lazy" decoding="async" width="326" height="330"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/4-estaciones.webp" alt="4 estaciones — 2 sabores a elección" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>4 estaciones — 2 sabores a elección</h3>
             <p class="product-description">Base de fruta disponible, acompañada de 2 sabores de helado, crema y salsa a elección.</p>
             <p class="price" data-fudo-id="162">$8.490</p>
           </div>
         </article>
 <article data-fudo-ids="163" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/arma-tu-copa.jpg" alt="Arma tu copa — 1 sabor a elección" loading="lazy" decoding="async" width="326" height="330"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/arma-tu-copa.webp" alt="Arma tu copa — 1 sabor a elección" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Arma tu copa — 1 sabor a elección</h3>
             <p class="product-description">Selecciona una fruta, 1 sabor de helado, 1 pastel, crema y salsa de tu preferencia. Agrega tu topping favorito por $500.</p>
             <p class="price" data-fudo-id="163">$7.990</p>
           </div>
         </article>
 <article data-fudo-ids="164" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/copa-ananay.jpg" alt="Copa Ananay — 3 sabores a elección" loading="lazy" decoding="async" width="326" height="330"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/copa-ananay.webp" alt="Copa Ananay — 3 sabores a elección" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Copa Ananay — 3 sabores a elección</h3>
             <p class="product-description">Base de duraznos en conserva, acompañada de tres sabores de helado, crema y salsa de chocolate.</p>
             <p class="price" data-fudo-id="164">$7.990</p>
           </div>
         </article>
 <article data-fudo-ids="165" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/copa-corazon.jpg" alt="Copa corazón — 6 sabores a elección" loading="lazy" decoding="async" width="326" height="330"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/copa-corazon.webp" alt="Copa corazón — 6 sabores a elección" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Copa corazón — 6 sabores a elección</h3>
             <p class="product-description">6 sabores de helado, trozos de brownie, frutillas, salsa de frambuesa, crema y salsa de chocolate.</p>
             <p class="price" data-fudo-id="165">$16.890</p>
@@ -123,6 +152,7 @@
 <article data-fudo-ids="345" class="product-card"><!-- Fotografía futura: assets/img/helado-soft-con-topping-frutal-345.jpg -->
           <div class="product-photo photo-portrait"><img src="assets/productos/actualizacion/soft-frutal.webp" alt="Fotografía de referencia: Fotografía próximamente: Helado soft con topping frutal" loading="lazy" decoding="async" width="871" height="1200"><span class="photo-reference">Foto referencial</span></div>
           <div class="product-info"><h3>Helado soft con topping frutal</h3>
+            <p class="product-description">Helado soft acompañado de un topping frutal.</p>
             <p class="price" data-fudo-id="345">$4.000</p>
           </div>
         </article>
@@ -133,54 +163,63 @@
 <article data-fudo-ids="319" class="product-card"><!-- Fotografía futura: assets/img/dulce-de-1-000-319.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/dulces-surtidos.webp" alt="Fotografía de referencia: Fotografía próximamente: Dulce de $1.000" loading="lazy" decoding="async" width="1000" height="667"><span class="photo-reference">Foto referencial</span></div>
           <div class="product-info"><h3>Dulce de $1.000</h3>
+            <p class="product-description">Elige entre los dulces disponibles en el local para esta opción.</p>
             <p class="price" data-fudo-id="319">$1.000</p>
           </div>
         </article>
 <article data-fudo-ids="317" class="product-card"><!-- Fotografía futura: assets/img/dulce-de-1-500-317.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/dulces-surtidos.webp" alt="Fotografía de referencia: Fotografía próximamente: Dulce de $1.500" loading="lazy" decoding="async" width="1000" height="667"><span class="photo-reference">Foto referencial</span></div>
           <div class="product-info"><h3>Dulce de $1.500</h3>
+            <p class="product-description">Elige entre los dulces disponibles en el local para esta opción.</p>
             <p class="price" data-fudo-id="317">$1.500</p>
           </div>
         </article>
 <article data-fudo-ids="320" class="product-card"><!-- Fotografía futura: assets/img/dulce-de-1-800-320.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/dulces-surtidos.webp" alt="Fotografía de referencia: Fotografía próximamente: Dulce de $1.800" loading="lazy" decoding="async" width="1000" height="667"><span class="photo-reference">Foto referencial</span></div>
           <div class="product-info"><h3>Dulce de $1.800</h3>
+            <p class="product-description">Elige entre los dulces disponibles en el local para esta opción.</p>
             <p class="price" data-fudo-id="320">$1.800</p>
           </div>
         </article>
 <article data-fudo-ids="333" class="product-card"><!-- Fotografía futura: assets/img/dulce-de-200-333.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/dulces-surtidos.webp" alt="Fotografía de referencia: Fotografía próximamente: Dulce de $200" loading="lazy" decoding="async" width="1000" height="667"><span class="photo-reference">Foto referencial</span></div>
           <div class="product-info"><h3>Dulce de $200</h3>
+            <p class="product-description">Elige entre los dulces disponibles en el local para esta opción.</p>
             <p class="price" data-fudo-id="333">$200</p>
           </div>
         </article>
 <article data-fudo-ids="331" class="product-card"><!-- Fotografía futura: assets/img/dulce-de-3x-1-000-331.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/dulces-surtidos.webp" alt="Fotografía de referencia: Fotografía próximamente: Dulce de 3x$1.000" loading="lazy" decoding="async" width="1000" height="667"><span class="photo-reference">Foto referencial</span></div>
           <div class="product-info"><h3>Dulce de 3x$1.000</h3>
+            <p class="product-description">Elige entre los dulces disponibles en el local para esta opción.</p>
             <p class="price" data-fudo-id="331">$1.000</p>
           </div>
         </article>
 <article data-fudo-ids="330" class="product-card"><!-- Fotografía futura: assets/img/dulce-de-500-330.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/dulces-surtidos.webp" alt="Fotografía de referencia: Fotografía próximamente: Dulce de $500" loading="lazy" decoding="async" width="1000" height="667"><span class="photo-reference">Foto referencial</span></div>
           <div class="product-info"><h3>Dulce de $500</h3>
+            <p class="product-description">Elige entre los dulces disponibles en el local para esta opción.</p>
             <p class="price" data-fudo-id="330">$500</p>
           </div>
         </article>
 <article data-fudo-ids="329" class="product-card"><!-- Fotografía futura: assets/img/dulce-de-600-329.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/dulces-surtidos.webp" alt="Fotografía de referencia: Fotografía próximamente: Dulce de $600" loading="lazy" decoding="async" width="1000" height="667"><span class="photo-reference">Foto referencial</span></div>
           <div class="product-info"><h3>Dulce de $600</h3>
+            <p class="product-description">Elige entre los dulces disponibles en el local para esta opción.</p>
             <p class="price" data-fudo-id="329">$600</p>
           </div>
         </article>
 <article data-fudo-ids="332" class="product-card"><!-- Fotografía futura: assets/img/dulce-de-800-332.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/dulces-surtidos.webp" alt="Fotografía de referencia: Fotografía próximamente: Dulce de$800" loading="lazy" decoding="async" width="1000" height="667"><span class="photo-reference">Foto referencial</span></div>
           <div class="product-info"><h3>Dulce de$800</h3>
+            <p class="product-description">Elige entre los dulces disponibles en el local para esta opción.</p>
             <p class="price" data-fudo-id="332">$800</p>
           </div>
         </article>
 <article data-fudo-ids="318" class="product-card"><!-- Fotografía futura: assets/img/dulces-40g-318.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/dulces-surtidos.webp" alt="Fotografía de referencia: Fotografía próximamente: Dulces 40g" loading="lazy" decoding="async" width="1000" height="667"><span class="photo-reference">Foto referencial</span></div>
           <div class="product-info"><h3>Dulces 40g</h3>
+            <p class="product-description">Dulces en presentación de 40 g. Consulta la variedad disponible.</p>
             <p class="price" data-fudo-id="318">$1.000</p>
           </div>
         </article>
@@ -233,62 +272,72 @@
       <h3 class="catalog-subheading">Helados y conos</h3>
 <div class="product-grid">
 <article data-fudo-ids="301" class="product-card"><!-- Fotografía futura: assets/img/helado-artesanal-simple-1-sabor-301.jpg -->
-          <div class="product-photo photo-portrait"><img src="assets/productos/actualizacion/helado-simple.webp" alt="Fotografía de referencia: Fotografía próximamente: Helado artesanal Simple — 1 sabor" loading="lazy" decoding="async" width="800" height="1200"><span class="photo-reference">Foto referencial</span></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/helado-simple.webp" alt="Fotografía de referencia: Fotografía próximamente: Helado artesanal Simple — 1 sabor" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Helado artesanal Simple — 1 sabor</h3>
+            <p class="product-description">Un sabor de helado artesanal en cono.</p>
             <p class="price" data-fudo-id="301">$1.900</p>
           </div>
         </article>
 <article data-fudo-ids="302" class="product-card"><!-- Fotografía futura: assets/img/helado-artesanal-doble-2-sabores-302.jpg -->
-          <div class="product-photo photo-portrait"><img src="assets/productos/actualizacion/helado-doble.webp" alt="Fotografía de referencia: Fotografía próximamente: Helado artesanal Doble — 2 sabores" loading="lazy" decoding="async" width="800" height="1200"><span class="photo-reference">Foto referencial</span></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/helado-doble.webp" alt="Fotografía de referencia: Fotografía próximamente: Helado artesanal Doble — 2 sabores" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Helado artesanal Doble — 2 sabores</h3>
+            <p class="product-description">Dos sabores de helado artesanal en un mismo cono.</p>
             <p class="price" data-fudo-id="302">$2.900</p>
           </div>
         </article>
 <article data-fudo-ids="303" class="product-card"><!-- Fotografía futura: assets/img/helado-artesanal-triple-3-sabores-303.jpg -->
-          <div class="product-photo photo-portrait"><img src="assets/productos/actualizacion/helado-triple.webp" alt="Fotografía de referencia: Fotografía próximamente: Helado artesanal Triple — 3 sabores" loading="lazy" decoding="async" width="960" height="1200"><span class="photo-reference">Foto referencial</span></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/helado-triple.webp" alt="Fotografía de referencia: Fotografía próximamente: Helado artesanal Triple — 3 sabores" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Helado artesanal Triple — 3 sabores</h3>
+            <p class="product-description">Tres sabores de helado artesanal para combinar en un cono.</p>
             <p class="price" data-fudo-id="303">$3.490</p>
           </div>
         </article>
 <article data-fudo-ids="304" class="product-card"><!-- Fotografía futura: assets/img/helado-soft-maxi-304.jpg -->
-          <div class="product-photo"><img src="assets/productos/actualizacion/helado-soft.webp" alt="Fotografía de referencia: Fotografía próximamente: Helado Soft Maxi" loading="lazy" decoding="async" width="1000" height="750"><span class="photo-reference">Foto referencial</span></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/helado-soft.webp" alt="Fotografía de referencia: Fotografía próximamente: Helado Soft Maxi" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Helado Soft Maxi</h3>
+            <p class="product-description">Helado soft en cono, presentación Maxi.</p>
             <p class="price" data-fudo-id="304">$2.000</p>
           </div>
         </article>
 <article data-fudo-ids="305" class="product-card"><!-- Fotografía futura: assets/img/helado-soft-super-305.jpg -->
-          <div class="product-photo"><img src="assets/productos/actualizacion/helado-soft.webp" alt="Fotografía de referencia: Fotografía próximamente: Helado Soft Super" loading="lazy" decoding="async" width="1000" height="750"><span class="photo-reference">Foto referencial</span></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/helado-soft.webp" alt="Fotografía de referencia: Fotografía próximamente: Helado Soft Super" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Helado Soft Super</h3>
+            <p class="product-description">Helado soft en cono, presentación Super.</p>
             <p class="price" data-fudo-id="305">$1.500</p>
           </div>
         </article>
 <article data-fudo-ids="306" class="product-card"><!-- Fotografía futura: assets/img/helado-soft-mini-306.jpg -->
-          <div class="product-photo"><img src="assets/productos/actualizacion/helado-soft.webp" alt="Fotografía de referencia: Fotografía próximamente: Helado Soft Mini" loading="lazy" decoding="async" width="1000" height="750"><span class="photo-reference">Foto referencial</span></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/helado-soft.webp" alt="Fotografía de referencia: Fotografía próximamente: Helado Soft Mini" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Helado Soft Mini</h3>
+            <p class="product-description">Helado soft en cono, presentación Mini.</p>
             <p class="price" data-fudo-id="306">$1.000</p>
           </div>
         </article>
 <article data-fudo-ids="307" class="product-card"><!-- Fotografía futura: assets/img/cono-especial-oreo-307.jpg -->
           <div class="product-photo photo-portrait"><img src="assets/productos/actualizacion/producto-307.webp" alt="Fotografía próximamente: Cono especial Oreo" loading="lazy" decoding="async" width="900" height="1200"></div>
           <div class="product-info"><h3>Cono especial Oreo</h3>
+            <p class="product-description">Cono de helado con Oreo.</p>
             <p class="price" data-fudo-id="307">$2.000</p>
           </div>
         </article>
 <article data-fudo-ids="308" class="product-card"><!-- Fotografía futura: assets/img/cono-especial-chubi-con-chocolate-308.jpg -->
           <div class="product-photo photo-portrait"><img src="assets/productos/actualizacion/producto-308.webp" alt="Fotografía próximamente: Cono especial Chubi con chocolate" loading="lazy" decoding="async" width="900" height="1200"></div>
           <div class="product-info"><h3>Cono especial Chubi con chocolate</h3>
+            <p class="product-description">Cono de helado con Chubi y chocolate.</p>
             <p class="price" data-fudo-id="308">$2.000</p>
           </div>
         </article>
 <article data-fudo-ids="309" class="product-card"><!-- Fotografía futura: assets/img/cono-especial-salsa-de-maracuya-309.jpg -->
           <div class="product-photo photo-portrait"><img src="assets/productos/actualizacion/producto-309.webp" alt="Fotografía próximamente: Cono especial Salsa de maracuyá" loading="lazy" decoding="async" width="900" height="1200"></div>
           <div class="product-info"><h3>Cono especial Salsa de maracuyá</h3>
+            <p class="product-description">Cono de helado con salsa de maracuyá.</p>
             <p class="price" data-fudo-id="309">$2.000</p>
           </div>
         </article>
 <article data-fudo-ids="310" class="product-card"><!-- Fotografía futura: assets/img/cono-especial-nuez-con-chocolate-310.jpg -->
           <div class="product-photo photo-portrait"><img src="assets/productos/actualizacion/producto-310.webp" alt="Fotografía próximamente: Cono especial Nuez con chocolate" loading="lazy" decoding="async" width="900" height="1200"></div>
           <div class="product-info"><h3>Cono especial Nuez con chocolate</h3>
+            <p class="product-description">Cono de helado con nuez y chocolate.</p>
             <p class="price" data-fudo-id="310">$2.000</p>
           </div>
         </article>
@@ -299,54 +348,63 @@
 <article data-fudo-ids="351" class="product-card"><!-- Fotografía futura: assets/img/vasos-de-helado-kitkat-351.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/producto-351.webp" alt="Fotografía próximamente: Vasos de helado (KITKAT)" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Vasos de helado (KITKAT)</h3>
+            <p class="product-description">Helado servido en vaso, acompañado de KITKAT.</p>
             <p class="price" data-fudo-id="351">$3.000</p>
           </div>
         </article>
 <article data-fudo-ids="352" class="product-card"><!-- Fotografía futura: assets/img/vasos-de-helado-super-8-352.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/producto-352.webp" alt="Fotografía próximamente: Vasos de helado (SUPER 8)" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Vasos de helado (SUPER 8)</h3>
+            <p class="product-description">Helado servido en vaso, acompañado de SUPER 8.</p>
             <p class="price" data-fudo-id="352">$3.000</p>
           </div>
         </article>
 <article data-fudo-ids="353" class="product-card"><!-- Fotografía futura: assets/img/vasos-de-helado-costa-rama-353.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/producto-353.webp" alt="Fotografía próximamente: Vasos de helado (COSTA RAMA)" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Vasos de helado (COSTA RAMA)</h3>
+            <p class="product-description">Helado servido en vaso, acompañado de COSTA RAMA.</p>
             <p class="price" data-fudo-id="353">$3.000</p>
           </div>
         </article>
 <article data-fudo-ids="354" class="product-card"><!-- Fotografía futura: assets/img/vasos-de-helado-brownie-354.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/producto-354.webp" alt="Fotografía próximamente: Vasos de helado (BROWNIE)" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Vasos de helado (BROWNIE)</h3>
+            <p class="product-description">Helado servido en vaso, acompañado de BROWNIE.</p>
             <p class="price" data-fudo-id="354">$3.000</p>
           </div>
         </article>
 <article data-fudo-ids="355" class="product-card"><!-- Fotografía futura: assets/img/vasos-de-helado-tifany-355.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/producto-355.webp" alt="Fotografía próximamente: Vasos de helado (TIFANY)" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Vasos de helado (TIFANY)</h3>
+            <p class="product-description">Helado servido en vaso, acompañado de TIFANY.</p>
             <p class="price" data-fudo-id="355">$3.000</p>
           </div>
         </article>
 <article data-fudo-ids="356" class="product-card"><!-- Fotografía futura: assets/img/vasos-de-helado-oreo-356.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/producto-356.webp" alt="Fotografía próximamente: Vasos de helado (OREO)" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Vasos de helado (OREO)</h3>
+            <p class="product-description">Helado servido en vaso, acompañado de OREO.</p>
             <p class="price" data-fudo-id="356">$3.000</p>
           </div>
         </article>
 <article data-fudo-ids="357" class="product-card"><!-- Fotografía futura: assets/img/vasos-de-helado-gomitas-357.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/producto-357.webp" alt="Fotografía próximamente: Vasos de helado (GOMITAS)" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Vasos de helado (GOMITAS)</h3>
+            <p class="product-description">Helado servido en vaso, acompañado de GOMITAS.</p>
             <p class="price" data-fudo-id="357">$3.000</p>
           </div>
         </article>
 <article data-fudo-ids="358" class="product-card"><!-- Fotografía futura: assets/img/vasos-de-helado-peta-zeta-358.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/producto-358.webp" alt="Fotografía próximamente: Vasos de helado (PETA ZETA)" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Vasos de helado (PETA ZETA)</h3>
+            <p class="product-description">Helado servido en vaso, acompañado de PETA ZETA.</p>
             <p class="price" data-fudo-id="358">$3.000</p>
           </div>
         </article>
 <article data-fudo-ids="359" class="product-card"><!-- Fotografía futura: assets/img/vasos-de-helado-chubi-359.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/producto-359.webp" alt="Fotografía próximamente: Vasos de helado (CHUBI)" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Vasos de helado (CHUBI)</h3>
+            <p class="product-description">Helado servido en vaso, acompañado de CHUBI.</p>
             <p class="price" data-fudo-id="359">$3.000</p>
           </div>
         </article>
@@ -360,49 +418,49 @@
         <div class="section-content" id="content-helados-divertidos">
       <div class="product-grid">
 <article data-fudo-ids="171" class="product-card">
-          <div class="product-photo"><img src="assets/img/buhita-chocolate.jpg" alt="Buhíta chocolate" loading="lazy" decoding="async" width="424" height="332"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/buhita-chocolate.webp" alt="Buhíta chocolate" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Buhíta chocolate</h3>
             <p class="product-description">Copa de helado decorada como una buhíta con galletas y detalles de chocolate.</p>
             <p class="price" data-fudo-id="171">$5.490</p>
           </div>
         </article>
 <article data-fudo-ids="172" class="product-card">
-          <div class="product-photo"><img src="assets/img/cerdito-frutilla.jpg" alt="Cerdito frutilla" loading="lazy" decoding="async" width="424" height="332"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/cerdito-frutilla.webp" alt="Cerdito frutilla" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Cerdito frutilla</h3>
             <p class="product-description">Copa de helado decorada como un cerdito con sabor frutilla y dulces decorativos.</p>
             <p class="price" data-fudo-id="172">$5.490</p>
           </div>
         </article>
 <article data-fudo-ids="173" class="product-card">
-          <div class="product-photo"><img src="assets/img/raton-choco.jpg" alt="Ratón Choco" loading="lazy" decoding="async" width="424" height="332"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/raton-choco.webp" alt="Ratón Choco" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Ratón Choco</h3>
             <p class="product-description">Copa de helado decorada como un ratón con galletas, chocolate y obleas.</p>
             <p class="price" data-fudo-id="173">$5.490</p>
           </div>
         </article>
 <article data-fudo-ids="174" class="product-card">
-          <div class="product-photo"><img src="assets/img/payaso-vainilla.jpg" alt="Payaso vainilla" loading="lazy" decoding="async" width="424" height="316"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/payaso-vainilla.webp" alt="Payaso vainilla" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Payaso vainilla</h3>
             <p class="product-description">Copa de helado de vainilla decorada como un payaso con dulces de colores.</p>
             <p class="price" data-fudo-id="174">$5.490</p>
           </div>
         </article>
 <article data-fudo-ids="175" class="product-card">
-          <div class="product-photo"><img src="assets/img/gusanito-frutal.jpg" alt="Gusanito frutal" loading="lazy" decoding="async" width="424" height="332"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/gusanito-frutal.webp" alt="Gusanito frutal" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Gusanito frutal</h3>
             <p class="product-description">Copa de helado frutal decorada creativamente con forma de gusanito y dulces.</p>
             <p class="price" data-fudo-id="175">$5.490</p>
           </div>
         </article>
 <article data-fudo-ids="176" class="product-card">
-          <div class="product-photo"><img src="assets/img/muneco-de-nieve-con-cookies.jpg" alt="Muñeco de nieve con cookies" loading="lazy" decoding="async" width="424" height="304"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/muneco-de-nieve-con-cookies.webp" alt="Muñeco de nieve con cookies" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Muñeco de nieve con cookies</h3>
             <p class="product-description">Copa de helado decorada como un muñeco de nieve con cookies y dulces.</p>
             <p class="price" data-fudo-id="176">$5.490</p>
           </div>
         </article>
 <article data-fudo-ids="177" class="product-card">
-          <div class="product-photo"><img src="assets/img/tren-helado-divertido.jpg" alt="Tren helado divertido" loading="lazy" decoding="async" width="760" height="325"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/tren-helado-divertido.webp" alt="Tren helado divertido" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Tren helado divertido</h3>
             <p class="product-description">Vehículo de helado con ruedas de galleta Oreo y tubos de barquillo.</p>
             <p class="price" data-fudo-id="177">$6.490</p>
@@ -719,44 +777,44 @@
         <div class="section-content" id="content-desayunos">
       <div class="product-grid">
 <article data-fudo-ids="41" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/barros-jarpa.jpg" alt="Barros Jarpa" loading="lazy" decoding="async" width="450" height="470"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/barros-jarpa.webp" alt="Barros Jarpa" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Barros Jarpa</h3>
-            <p class="product-description">Té o café.</p>
+            <p class="product-description">Pan con jamón y queso. Incluye té o café.</p>
             <p class="price" data-fudo-id="41">$2.990</p>
           </div>
         </article>
 <article data-fudo-ids="42" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/especial-ave-palta.jpg" alt="Especial ave palta" loading="lazy" decoding="async" width="450" height="470"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/especial-ave-palta.webp" alt="Especial ave palta" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Especial ave palta</h3>
-            <p class="product-description">Té o café.</p>
+            <p class="product-description">Pan con ave y palta. Incluye té o café.</p>
             <p class="price" data-fudo-id="42">$3.990</p>
           </div>
         </article>
 <article data-fudo-ids="43" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/especial-ave-mayo.jpg" alt="Especial ave mayo" loading="lazy" decoding="async" width="450" height="470"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/especial-ave-mayo.webp" alt="Especial ave mayo" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Especial ave mayo</h3>
-            <p class="product-description">Té o café.</p>
+            <p class="product-description">Pan con ave y mayonesa. Incluye té o café.</p>
             <p class="price" data-fudo-id="43">$3.990</p>
           </div>
         </article>
 <article data-fudo-ids="44" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/especial-ave-tomate.jpg" alt="Especial ave tomate" loading="lazy" decoding="async" width="450" height="470"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/especial-ave-tomate.webp" alt="Especial ave tomate" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Especial ave tomate</h3>
-            <p class="product-description">Té o café.</p>
+            <p class="product-description">Pan con ave y tomate. Incluye té o café.</p>
             <p class="price" data-fudo-id="44">$3.990</p>
           </div>
         </article>
 <article data-fudo-ids="45" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/especial-ave-queso.jpg" alt="Especial ave queso" loading="lazy" decoding="async" width="450" height="470"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/especial-ave-queso.webp" alt="Especial ave queso" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Especial ave queso</h3>
-            <p class="product-description">Té o café.</p>
+            <p class="product-description">Pan con ave y queso. Incluye té o café.</p>
             <p class="price" data-fudo-id="45">$3.490</p>
           </div>
         </article>
 <article data-fudo-ids="46" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/paila-de-huevos.jpg" alt="Paila de huevos" loading="lazy" decoding="async" width="450" height="470"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/paila-de-huevos.webp" alt="Paila de huevos" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Paila de huevos</h3>
-            <p class="product-description">Té o café.</p>
+            <p class="product-description">Huevos servidos en paila. Incluye té o café.</p>
             <p class="price" data-fudo-id="46">$3.990</p>
           </div>
         </article>
@@ -771,40 +829,44 @@
         <div class="section-content" id="content-completos">
       <div class="product-grid">
 <article data-fudo-ids="61" class="product-card">
-          <div class="product-photo photo-portrait"><img src="assets/img/completo.jpg" alt="Completo normal" loading="lazy" decoding="async" width="450" height="534"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/completo-normal.webp" alt="Completo normal" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Completo normal</h3>
             <p class="product-description">Italiano, completo y dinámico.</p>
             <p class="price" data-fudo-id="61">$2.000</p>
           </div>
         </article>
 <article data-fudo-ids="62" class="product-card">
-          <div class="product-photo photo-portrait"><img src="assets/img/completos-completo-xl.jpg" alt="Completo XL" loading="lazy" decoding="async" width="450" height="534"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/completo-xl.webp" alt="Completo XL" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Completo XL</h3>
             <p class="product-description">Italiano, completo y dinámico.</p>
             <p class="price" data-fudo-id="62">$2.990</p>
           </div>
         </article>
 <article data-fudo-ids="63" class="product-card">
-          <div class="product-photo photo-portrait"><img src="assets/img/completos-as-normal.jpg" alt="AS normal" loading="lazy" decoding="async" width="450" height="534"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/as-normal.webp" alt="AS normal" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>AS normal</h3>
+            <p class="product-description">Sándwich AS en su presentación normal.</p>
             <p class="price" data-fudo-id="63">$3.000</p>
           </div>
         </article>
 <article data-fudo-ids="64" class="product-card">
-          <div class="product-photo photo-portrait"><img src="assets/img/completos-as-xl.jpg" alt="AS XL" loading="lazy" decoding="async" width="450" height="534"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/as-xl.webp" alt="AS XL" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>AS XL</h3>
+            <p class="product-description">Sándwich AS en su presentación XL.</p>
             <p class="price" data-fudo-id="64">$5.000</p>
           </div>
         </article>
 <article data-fudo-ids="65" class="product-card">
-          <div class="product-photo photo-portrait"><img src="assets/img/papapleto.jpg" alt="Papapleto" loading="lazy" decoding="async" width="450" height="534"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/papapleto.webp" alt="Papapleto" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Papapleto</h3>
+            <p class="product-description">Nuestra versión de completo con papas fritas.</p>
             <p class="price" data-fudo-id="65">$2.100</p>
           </div>
         </article>
 <article data-fudo-ids="66" class="product-card">
-          <div class="product-photo photo-portrait"><img src="assets/img/papapleto-xl.jpg" alt="Papapleto XL" loading="lazy" decoding="async" width="450" height="534"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/papapleto-xl.webp" alt="Papapleto XL" loading="lazy" decoding="async" width="960" height="720"></div>
           <div class="product-info"><h3>Papapleto XL</h3>
+            <p class="product-description">Nuestra versión de completo con papas fritas, en formato XL.</p>
             <p class="price" data-fudo-id="66">$3.000</p>
           </div>
         </article>
@@ -821,18 +883,21 @@
 <article data-fudo-ids="316,67,68" class="product-card">
           <div class="product-photo"><img src="assets/img/papas-fritas.jpg" alt="Papas fritas" loading="lazy" decoding="async" width="660" height="516"></div>
           <div class="product-info"><h3>Papas fritas</h3>
+            <p class="product-description">Papas fritas para acompañar o compartir. Elige el tamaño de tu porción.</p>
             <dl class="price-options"><div data-fudo-id="316"><dt>Chica</dt><dd>$1.000</dd></div><div data-fudo-id="67"><dt>Mediana</dt><dd>$3.000</dd></div><div data-fudo-id="68"><dt>Familiar</dt><dd>$5.000</dd></div></dl>
           </div>
         </article>
 <article data-fudo-ids="69,70,71" class="product-card">
           <div class="product-photo"><img src="assets/img/salchipapas.jpg" alt="Salchipapas" loading="lazy" decoding="async" width="668" height="516"></div>
           <div class="product-info"><h3>Salchipapas</h3>
+            <p class="product-description">Papas fritas acompañadas de vienesas. Disponibles en distintos tamaños.</p>
             <dl class="price-options"><div data-fudo-id="69"><dt>Mediana</dt><dd>$3.500</dd></div><div data-fudo-id="70"><dt>Grande</dt><dd>$5.500</dd></div><div data-fudo-id="71"><dt>Familiar</dt><dd>$7.990</dd></div></dl>
           </div>
         </article>
 <article data-fudo-ids="72" class="product-card">
           <div class="product-photo"><img src="assets/img/papipollo.jpg" alt="Papipollo" loading="lazy" decoding="async" width="660" height="560"></div>
           <div class="product-info"><h3>Papipollo</h3>
+            <p class="product-description">Papas fritas acompañadas de pollo.</p>
             <p class="price" data-fudo-id="72">$5.990</p>
           </div>
         </article>
@@ -848,6 +913,7 @@
 <article data-fudo-ids="321,322,323,324,325,326,327,328" class="product-card">
           <div class="product-photo"><img src="assets/img/papas-fritas.jpg" alt="Fotografía próximamente: Papas fritas para llevar" loading="lazy" decoding="async" width="660" height="516"></div>
           <div class="product-info"><h3>Papas fritas para llevar</h3>
+            <p class="product-description">Papas fritas en formato para llevar, con distintas porciones a elección.</p>
             <dl class="price-options"><div data-fudo-id="321"><dt>Pequeña</dt><dd>$1.000</dd></div><div data-fudo-id="322"><dt>Mediana</dt><dd>$1.500</dd></div><div data-fudo-id="323"><dt>Grande</dt><dd>$2.000</dd></div><div data-fudo-id="324"><dt>Super</dt><dd>$2.500</dd></div><div data-fudo-id="325"><dt>Familiar</dt><dd>$3.000</dd></div><div data-fudo-id="326"><dt>Mega</dt><dd>$3.500</dd></div><div data-fudo-id="327"><dt>Gigante</dt><dd>$4.500</dd></div><div data-fudo-id="328"><dt>Maxi</dt><dd>$7.000</dd></div></dl>
           </div>
         </article>
@@ -1071,18 +1137,21 @@
 <article data-fudo-ids="33,104,105" class="product-card">
           <div class="product-photo"><img src="assets/img/empanadas-de-queso.jpg" alt="Empanadas de queso" loading="lazy" decoding="async" width="682" height="590"></div>
           <div class="product-info"><h3>Empanadas de queso</h3>
+            <p class="product-description">Empanadas rellenas de queso. Elige tu porción.</p>
             <dl class="price-options"><div data-fudo-id="33"><dt>3 unidades</dt><dd>$1.490</dd></div><div data-fudo-id="104"><dt>6 unidades</dt><dd>$1.990</dd></div><div data-fudo-id="105"><dt>10 unidades</dt><dd>$2.990</dd></div></dl>
           </div>
         </article>
 <article data-fudo-ids="34,106,107" class="product-card">
           <div class="product-photo"><img src="assets/img/nuggets.jpg" alt="Nuggets" loading="lazy" decoding="async" width="682" height="568"></div>
           <div class="product-info"><h3>Nuggets</h3>
+            <p class="product-description">Bocados de pollo apanados. Elige la cantidad de tu porción.</p>
             <dl class="price-options"><div data-fudo-id="34"><dt>3 unidades</dt><dd>$1.490</dd></div><div data-fudo-id="106"><dt>6 unidades</dt><dd>$1.990</dd></div><div data-fudo-id="107"><dt>10 unidades</dt><dd>$2.990</dd></div></dl>
           </div>
         </article>
 <article data-fudo-ids="108,109,110" class="product-card">
           <div class="product-photo"><img src="assets/img/filetillos-de-pollo-crispy.jpg" alt="Filetillos de pollo crispy" loading="lazy" decoding="async" width="682" height="504"></div>
           <div class="product-info"><h3>Filetillos de pollo crispy</h3>
+            <p class="product-description">Filetillos de pollo con cobertura crujiente, en distintas porciones.</p>
             <dl class="price-options"><div data-fudo-id="108"><dt>3 unidades</dt><dd>$3.490</dd></div><div data-fudo-id="109"><dt>6 unidades</dt><dd>$6.490</dd></div><div data-fudo-id="110"><dt>12 unidades</dt><dd>$12.290</dd></div></dl>
           </div>
         </article>
@@ -1093,6 +1162,7 @@
 <article data-fudo-ids="347" class="product-card">
           <div class="product-photo"><img src="assets/productos/snacks/10-aritos-de-cebolla.webp" alt="10 aritos de cebolla" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>10 aritos de cebolla</h3>
+            <p class="product-description">Porción de 10 aros de cebolla crujientes.</p>
             <p class="price" data-fudo-id="347">$2.990</p>
           </div>
         </article>
@@ -1108,28 +1178,28 @@
         <div class="section-content" id="content-pizzas">
       <div class="product-grid">
 <article data-fudo-ids="130" class="product-card">
-          <div class="product-photo photo-portrait"><img src="assets/img/pizza-ananay.jpg" alt="Pizza Ananay" loading="lazy" decoding="async" width="362" height="614"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/pizza-ananay.webp" alt="Pizza Ananay" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Pizza Ananay</h3>
             <p class="product-description">Salsa de tomate, queso, carne de vacuno, cebolla caramelizada, aceitunas y orégano.</p>
             <p class="price" data-fudo-id="130">$14.000</p>
           </div>
         </article>
 <article data-fudo-ids="131" class="product-card">
-          <div class="product-photo photo-portrait"><img src="assets/img/napolitana.jpg" alt="Pizza napolitana" loading="lazy" decoding="async" width="362" height="614"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/pizza-napolitana.webp" alt="Pizza napolitana" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Pizza napolitana</h3>
             <p class="product-description">Salsa de tomate, queso, tomate, jamón, aceitunas y orégano.</p>
             <p class="price" data-fudo-id="131">$12.000</p>
           </div>
         </article>
 <article data-fudo-ids="132" class="product-card">
-          <div class="product-photo photo-portrait"><img src="assets/img/carnivora.jpg" alt="Pizza carnívora" loading="lazy" decoding="async" width="362" height="614"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/pizza-carnivora.webp" alt="Pizza carnívora" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Pizza carnívora</h3>
             <p class="product-description">Salsa de tomate, queso, tomate, carne de cerdo, vacuno y pollo, aceitunas y orégano.</p>
             <p class="price" data-fudo-id="132">$15.000</p>
           </div>
         </article>
 <article data-fudo-ids="133" class="product-card">
-          <div class="product-photo photo-portrait"><img src="assets/img/pizzas-vegetariana.jpg" alt="Pizza vegetariana" loading="lazy" decoding="async" width="362" height="614"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/pizza-vegetariana.webp" alt="Pizza vegetariana" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Pizza vegetariana</h3>
             <p class="product-description">Salsa de tomate, queso, champiñón, choclo, pimentón rojo y verde, aceitunas y orégano.</p>
             <p class="price" data-fudo-id="133">$12.000</p>
@@ -1150,7 +1220,7 @@
 
         <!-- Alta manual: identificador web local, sin asignar un ID de Fudo. -->
         <article data-fudo-ids="web-pizza-individual-napolitana" class="product-card">
-          <div class="product-photo photo-portrait"><img src="assets/img/napolitana.jpg" alt="Pizza individual napolitana" loading="lazy" decoding="async" width="362" height="614"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/pizza-napolitana.webp" alt="Pizza individual napolitana" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Pizza individual napolitana</h3>
             <p class="product-description">Pizza individual napolitana.</p>
             <p class="price">$4.500</p>
@@ -1170,36 +1240,42 @@
 <article data-fudo-ids="195" class="product-card">
           <div class="product-photo"><img src="assets/productos/wafles/wafle-con-frutilla-y-chocolate.webp" alt="Wafle con frutilla y chocolate" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Wafle con frutilla y chocolate</h3>
+            <p class="product-description">Wafle acompañado de frutillas y chocolate.</p>
             <p class="price" data-fudo-id="195">$4.990</p>
           </div>
         </article>
 <article data-fudo-ids="196" class="product-card">
           <div class="product-photo"><img src="assets/productos/wafles/wafle-especial-ananay.webp" alt="Wafle especial Ananay" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Wafle especial Ananay</h3>
+            <p class="product-description">El wafle especial de la casa. Consulta sus acompañamientos al pedir.</p>
             <p class="price" data-fudo-id="196">$5.990</p>
           </div>
         </article>
 <article data-fudo-ids="197" class="product-card">
           <div class="product-photo"><img src="assets/productos/wafles/wafle-con-helado-artesanal-3-sabores-a-eleccion.webp" alt="Wafle con helado artesanal — 3 sabores a elección" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Wafle con helado artesanal — 3 sabores a elección</h3>
+            <p class="product-description">Wafle acompañado de helado artesanal, con tres sabores a elección.</p>
             <p class="price" data-fudo-id="197">$8.990</p>
           </div>
         </article>
 <article data-fudo-ids="198" class="product-card">
           <div class="product-photo"><img src="assets/productos/wafles/wafle-oreo-con-frutilla.webp" alt="Wafle Oreo con frutilla" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Wafle Oreo con frutilla</h3>
+            <p class="product-description">Wafle con galletas Oreo y frutillas.</p>
             <p class="price" data-fudo-id="198">$5.990</p>
           </div>
         </article>
 <article data-fudo-ids="199" class="product-card">
           <div class="product-photo"><img src="assets/productos/wafles/wafle-con-nutella-frutilla-y-banana.webp" alt="Wafle con Nutella, frutilla y banana" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Wafle con Nutella, frutilla y banana</h3>
+            <p class="product-description">Wafle con Nutella, frutillas y banana.</p>
             <p class="price" data-fudo-id="199">$6.990</p>
           </div>
         </article>
 <article data-fudo-ids="200" class="product-card">
           <div class="product-photo"><img src="assets/productos/wafles/wafle-divertido.webp" alt="Wafle divertido" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Wafle divertido</h3>
+            <p class="product-description">Una presentación divertida de nuestro wafle. Consulta sus acompañamientos.</p>
             <p class="price" data-fudo-id="200">$9.990</p>
           </div>
         </article>
@@ -1312,24 +1388,28 @@
 <article data-fudo-ids="311" class="product-card">
           <div class="product-photo"><img src="assets/productos/granizados/granizado-simple.webp" alt="Granizado para llevar" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Granizado para llevar</h3>
+            <p class="product-description">Granizado refrescante en presentación para llevar.</p>
             <p class="price" data-fudo-id="311">$1.000</p>
           </div>
         </article>
 <article data-fudo-ids="312" class="product-card">
           <div class="product-photo photo-portrait"><img src="assets/productos/granizados/granizado-personalizado.webp" alt="Granizado personalizado - Chico" loading="lazy" decoding="async" width="800" height="1200"></div>
           <div class="product-info"><h3>Granizado personalizado - Chico</h3>
+            <p class="product-description">Tu granizado personalizado en tamaño chico. Consulta las opciones disponibles.</p>
             <p class="price" data-fudo-id="312">$2.000</p>
           </div>
         </article>
 <article data-fudo-ids="313" class="product-card">
           <div class="product-photo photo-portrait"><img src="assets/productos/granizados/granizado-personalizado.webp" alt="Granizado Personalizado - Grande" loading="lazy" decoding="async" width="800" height="1200"></div>
           <div class="product-info"><h3>Granizado Personalizado - Grande</h3>
+            <p class="product-description">Tu granizado personalizado en tamaño grande. Consulta las opciones disponibles.</p>
             <p class="price" data-fudo-id="313">$3.000</p>
           </div>
         </article>
 <article data-fudo-ids="344" class="product-card">
           <div class="product-photo"><img src="assets/productos/granizados/granizado-con-crema.webp" alt="Granizado con crema para llevar" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Granizado con crema para llevar</h3>
+            <p class="product-description">Granizado acompañado de crema, en presentación para llevar.</p>
             <p class="price" data-fudo-id="344">$1.500</p>
           </div>
         </article>
@@ -1428,6 +1508,7 @@
 <article data-fudo-ids="340,341" class="product-card">
           <div class="product-photo photo-portrait"><img src="assets/productos/frutillas/fresas-con-crema-y-durazno.webp" alt="Fresas con crema y durazno" loading="lazy" decoding="async" width="900" height="1200"></div>
           <div class="product-info"><h3>Fresas con crema y durazno</h3>
+            <p class="product-description">Fresas y durazno acompañados de crema.</p>
             <dl class="price-options"><div data-fudo-id="340"><dt>Chico</dt><dd>$4.500</dd></div><div data-fudo-id="341"><dt>Grande</dt><dd>$5.500</dd></div></dl>
           </div>
         </article>
@@ -1458,12 +1539,14 @@
 <article data-fudo-ids="220" class="product-card">
           <div class="product-photo"><img src="assets/productos/frutales/ensalada-de-frutas-con-crema.webp" alt="Ensalada de frutas con crema" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Ensalada de frutas con crema</h3>
+            <p class="product-description">Frutas de estación acompañadas de crema.</p>
             <p class="price" data-fudo-id="220">$4.000</p>
           </div>
         </article>
 <article data-fudo-ids="221" class="product-card">
           <div class="product-photo"><img src="assets/productos/frutales/ensalada-de-frutas-con-leche-condensada.webp" alt="Ensalada de frutas con leche condensada" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Ensalada de frutas con leche condensada</h3>
+            <p class="product-description">Frutas de estación con leche condensada.</p>
             <p class="price" data-fudo-id="221">$4.500</p>
           </div>
         </article>
@@ -1476,6 +1559,7 @@
 <article data-fudo-ids="350" class="product-card">
           <div class="product-photo photo-portrait"><img src="assets/productos/frutales/mango-dulce.webp" alt="Mango dulce" loading="lazy" decoding="async" width="900" height="1200"></div>
           <div class="product-info"><h3>Mango dulce</h3>
+            <p class="product-description">Mango en una presentación dulce y frutal.</p>
             <p class="price" data-fudo-id="350">$3.000</p>
           </div>
         </article>
@@ -1494,6 +1578,7 @@
 
           <div class="product-photo"><img src="assets/productos/bebestibles/te.webp" alt="Té" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Té</h3>
+            <p class="product-description">Una taza de té para acompañar tu antojo.</p>
             <p class="price" data-fudo-id="139">$990</p>
           </div>
         </article>
@@ -1501,6 +1586,7 @@
 
           <div class="product-photo"><img src="assets/productos/bebestibles/cafe.webp" alt="Café" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Café</h3>
+            <p class="product-description">Una taza de café para disfrutar en cualquier momento.</p>
             <p class="price" data-fudo-id="140">$990</p>
           </div>
         </article>
@@ -1508,6 +1594,7 @@
 
           <div class="product-photo"><img src="assets/productos/bebestibles/milo.webp" alt="Milo" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Milo</h3>
+            <p class="product-description">Bebida de Milo, con su característico sabor a chocolate y malta.</p>
             <p class="price" data-fudo-id="141">$1.200</p>
           </div>
         </article>
@@ -1515,6 +1602,7 @@
 
           <div class="product-photo"><img src="assets/productos/bebestibles/cafe-de-maquina.webp" alt="Café máquina mediano" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Café máquina mediano</h3>
+            <p class="product-description">Café de máquina en tamaño mediano.</p>
             <p class="price" data-fudo-id="142">$1.590</p>
           </div>
         </article>
@@ -1522,6 +1610,7 @@
 
           <div class="product-photo"><img src="assets/productos/bebestibles/cafe-de-maquina.webp" alt="Café máquina grande" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Café máquina grande</h3>
+            <p class="product-description">Café de máquina en tamaño grande.</p>
             <p class="price" data-fudo-id="143">$2.100</p>
           </div>
         </article>
@@ -1529,6 +1618,7 @@
 
           <div class="product-photo"><img src="assets/productos/bebestibles/score.webp" alt="Score" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Score</h3>
+            <p class="product-description">Bebida energética Score.</p>
             <p class="price" data-fudo-id="144">$1.800</p>
           </div>
         </article>
@@ -1536,6 +1626,7 @@
 
           <div class="product-photo"><img src="assets/productos/bebestibles/red-bull.webp" alt="Red Bull" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Red Bull</h3>
+            <p class="product-description">Bebida energética Red Bull.</p>
             <p class="price" data-fudo-id="145">$2.000</p>
           </div>
         </article>
@@ -1543,6 +1634,7 @@
 
           <div class="product-photo photo-portrait"><img src="assets/productos/bebestibles/bebida-500-ml.webp" alt="Bebida 500 ml" loading="lazy" decoding="async" width="900" height="1200"></div>
           <div class="product-info"><h3>Bebida 500 ml</h3>
+            <p class="product-description">Bebida en botella de 500 ml. Consulta las variedades disponibles.</p>
             <p class="price" data-fudo-id="146">$1.500</p>
           </div>
         </article>
@@ -1550,6 +1642,7 @@
 
           <div class="product-photo photo-portrait"><img src="assets/productos/bebestibles/jugo-boca-ancha.webp" alt="Jugo boca ancha" loading="lazy" decoding="async" width="900" height="1200"></div>
           <div class="product-info"><h3>Jugo boca ancha</h3>
+            <p class="product-description">Jugo en botella de boca ancha. Consulta los sabores disponibles.</p>
             <p class="price" data-fudo-id="147">$1.500</p>
           </div>
         </article>
@@ -1557,6 +1650,7 @@
 
           <div class="product-photo photo-portrait"><img src="assets/productos/bebestibles/coca-cola-mini.webp" alt="Coca-Cola mini" loading="lazy" decoding="async" width="900" height="1200"></div>
           <div class="product-info"><h3>Coca-Cola mini</h3>
+            <p class="product-description">Coca-Cola en su presentación mini.</p>
             <p class="price" data-fudo-id="148">$1.000</p>
           </div>
         </article>
@@ -1564,6 +1658,7 @@
 
           <div class="product-photo photo-portrait"><img src="assets/productos/bebestibles/bebida-lata.webp" alt="Bebida lata" loading="lazy" decoding="async" width="900" height="1200"></div>
           <div class="product-info"><h3>Bebida lata</h3>
+            <p class="product-description">Bebida en lata. Consulta las variedades disponibles.</p>
             <p class="price" data-fudo-id="149">$1.500</p>
           </div>
         </article>
@@ -1571,6 +1666,7 @@
 
           <div class="product-photo photo-portrait"><img src="assets/productos/bebestibles/bebida-express.webp" alt="Bebida express" loading="lazy" decoding="async" width="900" height="1199"></div>
           <div class="product-info"><h3>Bebida express</h3>
+            <p class="product-description">Bebida en formato express para acompañar tu comida.</p>
             <p class="price" data-fudo-id="150">$990</p>
           </div>
         </article>
@@ -1578,6 +1674,7 @@
 
           <div class="product-photo photo-portrait"><img src="assets/productos/bebestibles/agua-mineral.webp" alt="Agua mineral" loading="lazy" decoding="async" width="900" height="1200"></div>
           <div class="product-info"><h3>Agua mineral</h3>
+            <p class="product-description">Agua mineral para acompañar tu pedido.</p>
             <p class="price" data-fudo-id="151">$1.000</p>
           </div>
         </article>
@@ -1585,6 +1682,7 @@
 
           <div class="product-photo photo-portrait"><img src="assets/productos/bebestibles/jugo-1-5-l.webp" alt="Jugo 1,5 L" loading="lazy" decoding="async" width="900" height="1200"></div>
           <div class="product-info"><h3>Jugo 1,5 L</h3>
+            <p class="product-description">Jugo en formato de 1,5 litros, ideal para compartir.</p>
             <p class="price" data-fudo-id="152">$2.500</p>
           </div>
         </article>
@@ -1592,6 +1690,7 @@
 
           <div class="product-photo photo-portrait"><img src="assets/productos/bebestibles/bebidas-1-5-l.webp" alt="Bebidas 1,5 L" loading="lazy" decoding="async" width="900" height="1200"></div>
           <div class="product-info"><h3>Bebidas 1,5 L</h3>
+            <p class="product-description">Bebida en formato de 1,5 litros. Consulta las variedades disponibles.</p>
             <p class="price" data-fudo-id="153">$2.500</p>
           </div>
         </article>
@@ -1607,6 +1706,7 @@
 
           <div class="product-photo"><img src="assets/productos/bebestibles/jugo-natural.webp" alt="Jugo natural" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Jugo natural</h3>
+            <p class="product-description">Jugo natural. Consulta los sabores disponibles.</p>
             <p class="price" data-fudo-id="154">$3.000</p>
           </div>
         </article>
@@ -1614,6 +1714,7 @@
 
           <div class="product-photo"><img src="assets/productos/bebestibles/batido-de-frutas-con-leche.webp" alt="Batido de frutas con leche" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Batido de frutas con leche</h3>
+            <p class="product-description">Batido que combina frutas y leche.</p>
             <p class="price" data-fudo-id="155">$3.500</p>
           </div>
         </article>
@@ -1624,12 +1725,14 @@
 <article data-fudo-ids="334" class="product-card"><!-- Fotografía futura: assets/img/bubbaloo-334.jpg -->
           <div class="product-photo"><img src="assets/productos/actualizacion/producto-334.webp" alt="Fotografía próximamente: Bubbaloo" loading="lazy" decoding="async" width="1080" height="810"></div>
           <div class="product-info"><h3>Bubbaloo</h3>
+            <p class="product-description">Consulta la presentación de Bubbaloo disponible hoy.</p>
             <p class="price" data-fudo-id="334">$2.500</p>
           </div>
         </article>
 <article data-fudo-ids="348" class="product-card"><!-- Fotografía futura: assets/img/jugo-en-caja-348.jpg -->
           <div class="product-photo photo-portrait"><img src="assets/productos/actualizacion/producto-348.webp" alt="Fotografía próximamente: jugo en caja" loading="lazy" decoding="async" width="900" height="1200"></div>
           <div class="product-info"><h3>jugo en caja</h3>
+            <p class="product-description">Jugo en caja. Consulta los sabores disponibles.</p>
             <p class="price" data-fudo-id="348">$600</p>
           </div>
         </article>
@@ -1643,39 +1746,39 @@
         <div class="section-content" id="content-bebidas-frias">
       <div class="product-grid">
 <article data-fudo-ids="210" class="product-card">
-          <div class="product-photo photo-square"><img src="assets/img/milkshake.jpg" alt="Milkshake — 1 sabor a elección" loading="lazy" decoding="async" width="582" height="562"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/milkshake.webp" alt="Milkshake — 1 sabor a elección" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Milkshake — 1 sabor a elección</h3>
-            <p class="product-description">Leche batida con helado a elección y crema.</p>
+            <p class="product-description">Batido de leche con un sabor de helado a elección, coronado con crema.</p>
             <p class="price" data-fudo-id="210">$4.290</p>
           </div>
         </article>
 <article data-fudo-ids="211,212" class="product-card bubble-card">
-          <div class="product-gallery" role="region" aria-label="Fotos de Bubble Tea con leche" tabindex="0"><div class="product-photo"><img src="assets/img/bubble-tea.jpg" alt="Presentación general de Bubble Tea" loading="lazy" decoding="async" width="654" height="546"></div></div>
+          <div class="product-gallery" role="region" aria-label="Fotos de Bubble Tea con leche" tabindex="0"><div class="product-photo"><img src="assets/img/carta-2026/bubble-tea-leche.webp" alt="Bubble Tea con leche" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div></div>
           <div class="product-info"><h3>Bubble Tea con leche</h3>
-            <p class="product-description">Frío o caliente.</p>
+            <p class="product-description">Bubble Tea con leche y sabor a elección. Se sirve frío o caliente.</p>
             <p class="bubble-flavors"><strong>Sabores:</strong> Matcha, Thai, Taro, Coco, Pistacho, Melón, Frutilla y Chocolate.</p>
             <dl class="price-options"><div data-fudo-id="211"><dt>Chico</dt><dd>$4.500</dd></div><div data-fudo-id="212"><dt>Grande</dt><dd>$5.500</dd></div></dl>
           </div>
         </article>
 <article data-fudo-ids="265,266" class="product-card bubble-card">
-          <div class="product-gallery" role="region" aria-label="Fotos de Bubble Tea sin leche" tabindex="0"><div class="product-photo"><img src="assets/img/bubble-tea.jpg" alt="Presentación general de Bubble Tea" loading="lazy" decoding="async" width="654" height="546"></div></div>
+          <div class="product-gallery" role="region" aria-label="Fotos de Bubble Tea sin leche" tabindex="0"><div class="product-photo"><img src="assets/img/carta-2026/bubble-tea-frutal.webp" alt="Bubble Tea frutal sin leche" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div></div>
           <div class="product-info"><h3>Bubble Tea sin leche</h3>
-            <p class="product-description">Se sirve frío.</p>
+            <p class="product-description">Bubble Tea sin leche, con sabor frutal a elección. Se sirve frío.</p>
             <p class="bubble-flavors"><strong>Sabores:</strong> Mango, Manzana, Maracuyá, Arándano, Lichi, Piña, Durazno y Frutilla.</p>
             <dl class="price-options"><div data-fudo-id="265"><dt>Chico</dt><dd>$4.500</dd></div><div data-fudo-id="266"><dt>Grande</dt><dd>$5.500</dd></div></dl>
           </div>
         </article>
 <article data-fudo-ids="213,214" class="product-card">
-          <div class="product-photo photo-portrait"><img src="assets/productos/bebidas-frias/frappuccino-con-crema.webp" alt="Frappuccino con crema" loading="lazy" decoding="async" width="899" height="1200"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/frappuccino-con-crema.webp" alt="Frappuccino con crema" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Frappuccino con crema</h3>
-            <p class="product-description">Versión coronada con crema.</p>
+            <p class="product-description">Bebida fría tipo frappuccino, coronada con crema.</p>
             <dl class="price-options"><div data-fudo-id="213"><dt>Chico</dt><dd>$2.100</dd></div><div data-fudo-id="214"><dt>Grande</dt><dd>$2.900</dd></div></dl>
           </div>
         </article>
 <article data-fudo-ids="215,216" class="product-card">
-          <div class="product-photo photo-portrait"><img src="assets/productos/bebidas-frias/frappuccino-sin-crema.webp" alt="Frappuccino sin crema" loading="lazy" decoding="async" width="900" height="1200"></div>
+          <div class="product-photo"><img src="assets/img/carta-2026/frappuccino-sin-crema.webp" alt="Frappuccino sin crema" loading="lazy" decoding="async" width="960" height="960"><span class="photo-reference">Imagen referencial</span></div>
           <div class="product-info"><h3>Frappuccino sin crema</h3>
-            <p class="product-description">Versión sin crema.</p>
+            <p class="product-description">Bebida fría tipo frappuccino, en su versión sin crema.</p>
             <dl class="price-options"><div data-fudo-id="215"><dt>Chico</dt><dd>$1.900</dd></div><div data-fudo-id="216"><dt>Grande</dt><dd>$2.700</dd></div></dl>
           </div>
         </article>
@@ -1690,8 +1793,8 @@
   <!-- Información del local. Editar el horario aquí cuando esté confirmado. -->
   <footer id="contacto" class="site-footer">
     <div class="footer-main"><div class="footer-welcome"><p class="eyebrow">INFORMACIÓN DEL LOCAL</p><h2>Heladería Ananay</h2><p>Los buenos momentos<br>saben mejor juntos.</p><a class="footer-back" href="#inicio">Volver al inicio <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></span></a></div>
-    <div class="footer-contact"><address><span>DIRECCIÓN</span><a href="https://www.google.com/maps/search/?api=1&amp;query=ARTURO+PRAT+2575+SAN+JAVIER+CHILE" target="_blank" rel="noopener noreferrer">ARTURO PRAT 2575, SAN JAVIER <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><span>TELÉFONO</span><a href="tel:+56932834024">+56 9 3283 4024</a><span>EMAIL</span><a href="mailto:Heladeriaananay2026@gmail.com">Heladeriaananay2026@gmail.com</a><span>INSTAGRAM</span><a class="instagram-contact" href="https://www.instagram.com/ananay.chile2026/" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>@ananay.chile2026</a></address><p class="opening-hours"><span>HORARIO</span>Horario por confirmar</p><a class="footer-whatsapp" href="https://wa.me/56932834024" target="_blank" rel="noopener noreferrer"><svg class="icon whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>WhatsApp<br>+56 9 3283 4024</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div></div>
-    <div class="footer-thanks"><h3>Gracias por tu visita</h3><p>Dulces momentos para compartir</p></div>
+    <div class="footer-contact"><address><span>DIRECCIÓN</span><a href="https://www.google.com/maps/search/?api=1&amp;query=ARTURO+PRAT+2575+SAN+JAVIER+CHILE" target="_blank" rel="noopener noreferrer">ARTURO PRAT 2575, SAN JAVIER <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><span>TELÉFONO</span><a href="tel:+56932834024">+56 9 3283 4024</a><span>EMAIL</span><a href="mailto:Heladeriaananay2026@gmail.com">Heladeriaananay2026@gmail.com</a><span>ENCUÉNTRANOS TAMBIÉN EN</span><a class="instagram-contact" href="https://www.instagram.com/ananay.chile2026/" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>@ananay.chile2026</a><a class="facebook-contact" href="https://www.facebook.com/ananay.chile2026" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 22v-9h3l.5-4H14V6.5c0-1.2.4-2 2-2h2V1.2A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9Z"/></svg>Ananay en Facebook <span aria-hidden="true">↗</span></a></address><p class="opening-hours"><span>HORARIO</span>Horario por confirmar</p><a class="footer-whatsapp" href="https://wa.me/56932834024" target="_blank" rel="noopener noreferrer"><svg class="icon whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>WhatsApp<br>+56 9 3283 4024</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div></div>
+    <div class="footer-thanks"><h3>Gracias por tu visita</h3><p>Dulces momentos para compartir</p><p class="photo-note">Las imágenes son referenciales; la presentación puede variar.</p></div>
     <div class="footer-bottom"><a class="servimat-signature" href="https://www.instagram.com/servimat._/" target="_blank" rel="noopener noreferrer" aria-label="Diseño y desarrollo por Servimat. Visitar Instagram en otra pestaña"><span class="signature-label">DESIGN &amp; DEVELOPMENT BY</span><span class="signature-brand"><img src="assets/img/servimat/logo-servimat.png" alt="" width="834" height="834"><strong>SERVIMAT™</strong><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></span></a></div>
   </footer>
   </div>

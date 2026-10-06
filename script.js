@@ -23,7 +23,11 @@
   const normalize = value => value.toLowerCase().normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '').replace(/waffles?/g, 'wafle')
     .replace(/wafles/g, 'wafle').replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
-  const cardNames = new Map(sections.flatMap(section => section.cards.map(card => [card, normalize(card.querySelector('h3').textContent)])));
+  const cardNames = new Map(sections.flatMap(section => section.cards.map(card => [card, normalize([
+    card.querySelector('h3').textContent,
+    card.querySelector('.product-description')?.textContent || '',
+    card.querySelector('.bubble-flavors')?.textContent || '',
+  ].join(' '))])));
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   /* Preserva nodos, fotos, precios y descripciones. Solo controla su visibilidad. */
@@ -100,7 +104,7 @@
   }
   document.documentElement.classList.add('js-ready');
 
-  /* Búsqueda por nombre, sin tildes ni diferencias entre waffle / wafle. */
+  /* Búsqueda por nombre, descripción y sabores, sin tildes ni diferencias entre waffle / wafle. */
   function filterProducts() {
     const query = normalize(search.value);
     const words = query.split(' ').filter(Boolean);
@@ -208,6 +212,38 @@
   history.scrollRestoration = 'manual';
   if (location.hash) navigateTo(location.hash, false, false, true);
   window.addEventListener('load', () => navigateTo(location.hash || '#inicio', false, false, true), { once: true });
+
+  /* Accesos rápidos: resalta la familia que se está consultando. */
+  const quickLinks = [...document.querySelectorAll('.quick-chip')];
+  let scrollFrame = 0;
+  function updateCurrentFamily() {
+    scrollFrame = 0;
+    const edge = document.querySelector('.browse-bar').getBoundingClientRect().bottom + 90;
+    let current = null;
+    if (!isSearching) {
+      for (const family of families) {
+        const rect = family.getBoundingClientRect();
+        if (rect.top <= edge && rect.bottom > edge) current = family.id;
+      }
+    }
+    quickLinks.forEach(link => {
+      if (link.hash === `#${current}`) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+  scrollArea.addEventListener('scroll', () => {
+    if (!scrollFrame) scrollFrame = requestAnimationFrame(updateCurrentFamily);
+  }, { passive: true });
+
+  /* Una entrada suave al descubrir tarjetas; cada elemento se anima solo una vez. */
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      if (!reducedMotion.matches) entry.target.classList.add('reveal-once');
+      revealObserver.unobserve(entry.target);
+    });
+  }, { root: scrollArea, threshold: .08 });
+  document.querySelectorAll('.family-card, .product-card').forEach(card => revealObserver.observe(card));
 
   /* Firma independiente: desaparece al acercarse el footer, donde queda la firma permanente. */
   const signature = document.querySelector('.servimat-floating');
