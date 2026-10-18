@@ -224,7 +224,8 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
 .footer-bottom .signature-brand img { width: 45px; height: 40px; }
 
 /* 8. Flotantes independientes; safe areas sin reservar una barra inferior. */
-.servimat-floating { position: fixed; z-index: 40; left: 16px; left: calc(16px + var(--safe-left)); bottom: 16px; bottom: calc(16px + var(--safe-bottom)); width: max-content; max-width: calc(100vw - 106px - var(--safe-left) - var(--safe-right)); padding: 8px 10px; border-radius: 14px; background: rgba(255,252,250,.9); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); box-shadow: 0 3px 15px #281c3d0d; opacity: .78; min-height: 44px; justify-content: center; transition: opacity .3s, transform .3s, visibility .3s; }
+.servimat-floating { position: fixed; z-index: 40; left: 16px; left: calc(16px + var(--safe-left)); bottom: 16px; bottom: calc(16px + var(--safe-bottom)); width: max-content; max-width: calc(100vw - 106px - var(--safe-left) - var(--safe-right)); padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; opacity: .72; min-height: 44px; justify-content: center; text-shadow: 0 1px 2px #fff, 0 0 4px #fff; transition: opacity .3s, transform .3s, visibility .3s; }
+.servimat-floating .signature-brand strong { font-size: 10px; letter-spacing: .08em; }
 .servimat-floating .signature-brand { animation: soft-float 5s ease-in-out infinite; }
 .servimat-floating:hover { opacity: 1; }
 .servimat-floating.is-hidden { opacity: 0; pointer-events: none; transform: translateY(10px); visibility: hidden; }
@@ -326,9 +327,6 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
   .family-copy h3 { font-size: 13px; }
 }
 @media (max-width: 359px) {
-  .servimat-floating { padding: 7px 8px; }
-  .servimat-floating .signature-label { font-size: 6.5px; letter-spacing: .06em; }
-  .servimat-floating .signature-brand strong { font-size: 11px; }
   .brand-logo { width: 110px; height: 122px; }
   h1 { font-size: 38px; }
   .family-card>img { width: 40px; height: 40px; }
@@ -516,6 +514,12 @@ main { max-width: var(--page-width); padding: 0 24px 34px; margin: auto; }
   .extras dd { font-size: 16px; }
   .family-arrow { width: 42px; height: 29px; margin-top: 9px; }
 }
+
+/* Una tarjeta con todos los sabores; ancho cómodo para leer sus precios. */
+.product-grid-individual { grid-template-columns: minmax(0, 1fr); max-width: 420px; }
+.product-grid-individual .price-options>div { flex-wrap: nowrap; }
+.product-grid-individual .price-options dt { min-width: 0; }
+.product-grid-individual .price-options dd { flex-shrink: 0; }
 
 /* Productos sin fotografía: tarjetas compactas, sin reservar un espacio de imagen. */
 .product-grid-text { grid-template-columns: repeat(3, minmax(0, 1fr)); }

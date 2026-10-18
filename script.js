@@ -27,6 +27,7 @@
     card.querySelector('h3').textContent,
     card.querySelector('.product-description')?.textContent || '',
     card.querySelector('.bubble-flavors')?.textContent || '',
+    [...card.querySelectorAll('.price-options dt')].map(option => option.textContent).join(' '),
   ].join(' '))])));
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
